@@ -1,0 +1,33 @@
+import styles from './Info.module.css';
+import cemnisan from '../../../../data/image/cemnisan.jpg'
+
+function Info() {
+    return (
+        <>
+            <div className={`${styles.container} container`}>
+                <div className="row">
+                    <div className="col-md-7 mb-4">
+                        <div className="homeTitle">
+                            <h1>Hi! I'm Cem NİSAN</h1>
+                            <h4>Full-Stack Web Developer</h4>
+                        </div>
+                        <div className="homeParagph mt-4">
+                            <p className={`${styles.homeParagph} py-3`}>
+
+                                Hello 👋 <br/> I'm Cem. I am 21 years old. I am a senior student at Çukurova University. I have been dealing with software languages ​​for about 1 year. I started my software journey with Python and its Framework, Django.
+                                After developing a few projects with Django, I wanted to devote myself to the web space and started learning Javascript. I have learned / continue to learn NodeJS and ReactJS along with javascript. I want to continue my career as Full-Stack Web Developer.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="col-md-5 px-5">
+                        <div className={styles.homeImg}>
+                            <img  src={cemnisan} alt="..." />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
+
+export default Info;

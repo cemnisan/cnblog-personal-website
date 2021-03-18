@@ -1,0 +1,10 @@
+.skillsItem{
+    width: 230px;
+    height: 70px;
+    border: 1px solid #3d3d50;
+    box-sizing: border-box;
+    margin:10px;
+    margin-left: 6em;
+    align-items: center;
+    border-radius: 8px;
+}

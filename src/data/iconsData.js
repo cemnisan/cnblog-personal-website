@@ -1,0 +1,22 @@
+export const iconsData = [
+    {
+        title:"Github",
+        link:"https://github.com/cemnisan",
+        icon:['fab','github']
+    },
+    {
+        title:"İnstagram",
+        link:"https://www.instagram.com/nisancem/",
+        icon:['fab','instagram']
+    },
+    {
+        title:"Linkedin",
+        link:"https://www.linkedin.com/in/cem-nisan-2009731bb/",
+        icon:['fab','linkedin']
+    },
+    {
+        title:"Twitter",
+        link:"https://twitter.com/nisanc_db",
+        icon:['fab','twitter']
+    }
+]
