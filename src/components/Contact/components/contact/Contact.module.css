@@ -1,0 +1,12 @@
+.formGroup{
+    color:#6c757d;
+}
+
+.formLabel{
+    font-family: 'adobe-clean, sans-serif, arial';
+}
+
+.formMessage{
+    margin:auto;
+    color:#6c757d;
+}

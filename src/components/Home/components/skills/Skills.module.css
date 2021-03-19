@@ -8,3 +8,16 @@
     align-items: center;
     border-radius: 8px;
 }
+
+
+@media screen and (max-width: 1370px) and (min-width: 100px){
+    .skillsItem{
+        margin-left: 8em;
+        margin:2px;
+    }
+    .skillsCol{
+        display: flex;
+        justify-content: center;
+    }
+}
+

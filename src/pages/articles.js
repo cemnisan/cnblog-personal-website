@@ -1,9 +1,10 @@
 import Layout from "../layout/layout";
+import {Article} from '../components/Articles/MainArticle';
 
 function Articles(){
     return(
         <Layout>
-            <h1>Hello World, this is Article Page.</h1>
+           <Article/>
         </Layout>
     )
 }

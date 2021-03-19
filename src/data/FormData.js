@@ -4,35 +4,40 @@ export const formData = [
         "for":"name",
         "type":"text",
         "idForm":"name",
-        "placeHolder":"Name"
+        "placeHolder":"Name",
+        "name":"user_name"
     },
     {
         "id":2,
         "for":"lastName",
         "type":"text",
         "idForm":"lastName",
-        "placeHolder":"Last Name"
+        "placeHolder":"Last Name",
+        "name":"user_lastName"
     },
     {
         "id":3,
         "for":"email",
         "type":"email",
         "idForm":"email",
-        "placeHolder":"Email"
+        "placeHolder":"Email",
+        "name":"user_email"
     },
     {
         "id":4,
         "for":"city",
         "type":"text",
         "idForm":"city",
-        "placeHolder":"City"
+        "placeHolder":"City",
+        "name":"user_city"
     },
     {
         "id":5,
         "for":"message",
         "type":"text-area",
         "idForm":"message",
-        "placeHolder":"Message"
+        "placeHolder":"Message",
+        "name":"message"
     }
 ];
 
