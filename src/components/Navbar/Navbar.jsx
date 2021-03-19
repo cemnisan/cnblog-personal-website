@@ -13,7 +13,7 @@ function Navbar(){
                 </div>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className={`navbar-nav ms-auto ${styles.navUl}`}>
-                        {itemLink.link.map((item,index) =>(
+                        {itemLinks.link.map((item,index) =>(
                             <li key={index}  className="nav-item active">
                                 <a className={`${styles.item} nav-link`} href={item.href}>{item.title}</a>
                             </li>

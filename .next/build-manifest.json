@@ -24,10 +24,10 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
-    "/articles": [
+    "/articles/[slug]": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/articles.js"
+      "static/chunks/pages/articles/[slug].js"
     ],
     "/contact": [
       "static/chunks/main.js",

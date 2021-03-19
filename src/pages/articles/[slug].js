@@ -1,13 +1,13 @@
-import slugify from "slugify";
+import React from "react";
 import Layout from "../../layout/layout";
+import Detail from '../../components/Detail/ArticleDetail';
+import slugify from "slugify";
 import unfecth from 'isomorphic-fetch';
-import React, { useState } from "react";
 
-function ArticleDetail({ character }) {
-  
+function ArticleDetail({ article }) {
   return(
     <Layout>
-      
+      <Detail article={article} />
     </Layout>
   )
 }
@@ -15,9 +15,9 @@ function ArticleDetail({ character }) {
 
 export async function getStaticPaths() {
   const data = await unfecth("http://localhost:1337/posts")
-  const character = await data.json()
+  const article = await data.json()
   return {
-    paths: character.map((item) => {
+    paths: article.map((item) => {
       return {
         params: { slug: `${slugify(item.title, { lower: true })}-${item.id}` }
       }
@@ -29,10 +29,10 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const id = params.slug.split("-").slice(-1)[0]
   const data = await unfecth("http://localhost:1337/posts/" + id)
-  const character = await data.json()
+  const article = await data.json()
   return {
     props: {
-      character
+      article
     }
   }
 }
