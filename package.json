@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && next export",
+    "dev": "next",
+    "build": "next build",
     "start": "next start"
   },
   "keywords": [],
