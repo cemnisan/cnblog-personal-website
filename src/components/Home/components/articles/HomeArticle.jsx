@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 function HomeArticle({lastArticles}) {
   return (
-    <React.Fragment>
+    /*<React.Fragment>
       {
         lastArticles && lastArticles.map((item, index) => (
           <React.Fragment key={index}>
@@ -25,7 +25,8 @@ function HomeArticle({lastArticles}) {
           </React.Fragment>
       ))
       }
-    </React.Fragment>
+    </React.Fragment>*/
+    <></>
   );
 }
 

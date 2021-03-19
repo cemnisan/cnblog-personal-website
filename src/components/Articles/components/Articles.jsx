@@ -5,7 +5,7 @@ import styles from "./Articles.module.css";
 
 function Articles({ articles }) {
   return (
-    <React.Fragment>
+    /*<React.Fragment>
       {articles &&
         articles.map((item, index) => (
           <React.Fragment key={index}>
@@ -34,7 +34,8 @@ function Articles({ articles }) {
             </div>
           </React.Fragment>
         ))}
-    </React.Fragment>
+    </React.Fragment>*/
+    <></>
   );
 }
 

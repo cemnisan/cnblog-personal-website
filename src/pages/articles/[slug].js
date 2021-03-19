@@ -13,7 +13,7 @@ function ArticleDetail({ article }) {
 }
 
 
-export async function getStaticPaths() {
+/*export async function getStaticPaths() {
   const data = await unfecth("http://localhost:1337/posts")
   const article = await data.json()
   return {
@@ -35,6 +35,6 @@ export async function getStaticProps({ params }) {
       article
     }
   }
-}
+}*/
 
 export default ArticleDetail;

@@ -10,7 +10,7 @@ function Articles({articles}){
     )
 }
 
-export async function getStaticProps(){
+/*export async function getStaticProps(){
     const res = await unfecth("http://localhost:1337/posts")
     const articles = await res.json();
     return{
@@ -18,6 +18,6 @@ export async function getStaticProps(){
         articles
       }
     }
-  }
+  }*/
 
 export default Articles;

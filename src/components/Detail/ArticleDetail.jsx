@@ -3,9 +3,8 @@ import styles from "./Detail.module.css";
 const API_URL = 'http://localhost:1337'
 
 function Detail({ article }) {
-  console.log(article);
   return (
-    <div className="container">
+    /*<div className="container">
       <div className="row">
         <div className="col-md-12 title">
           <h1 className="text-center">{article.title}</h1>
@@ -33,7 +32,9 @@ function Detail({ article }) {
           </p>
         </div>
       </div>
-    </div>
+    </div>*/
+    <>
+    </>
   );
 }
 

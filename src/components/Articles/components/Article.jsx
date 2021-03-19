@@ -2,7 +2,6 @@ import React from 'react';
 import Articles from './Articles';
 
 function Article({articles}) {
-    console.log(articles);
     return (
         <React.Fragment>
             <div className="container mt-5">

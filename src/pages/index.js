@@ -10,7 +10,7 @@ function Index({ lastArticles }) {
   );
 }
 
-export async function getStaticProps() {
+/*export async function getStaticProps() {
   const res = await unfetch("http://localhost:1337/posts");
   const lastArticles = await res.json();
   return {
@@ -18,6 +18,6 @@ export async function getStaticProps() {
         lastArticles,
     },
   };
-}
+}*/
 
 export default Index;
