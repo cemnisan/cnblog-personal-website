@@ -19,7 +19,7 @@ function HomeArticle({lastArticles}) {
               </div>
   
               <div className="articleButton d-flex justify-content-end">
-                  <Link href={`/articles/${item.id}/${slugify(item.title, { lower: true })}`}><h6 className="btn btn-dark">Detail</h6></Link>
+                  <Link href={`/articles/${slugify(item.title, { lower: true })}-${item.id}`}><h6 className="btn btn-dark">Detail</h6></Link>
               </div>
               <hr/>
           </React.Fragment>

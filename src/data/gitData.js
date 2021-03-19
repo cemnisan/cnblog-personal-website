@@ -1,6 +1,0 @@
-export const gitData = [
-    "https://api.github.com/repos/cemnisan/kodluyoruz-form-contact-task",
-    "https://api.github.com/repos/cemnisan/blog-template-with-react",
-    "https://api.github.com/repos/cemnisan/article-blog-api",
-    "https://api.github.com/repositories/338629433"
-];

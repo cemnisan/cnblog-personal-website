@@ -1,6 +1,6 @@
 import Layout from "../layout/layout";
 import unfecth from 'isomorphic-fetch';
-import {Article} from '../components/Articles/MainArticle';
+import {Article} from '../components/Articles/';
 
 function Articles({articles}){
     return(

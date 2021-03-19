@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import emailjs, { send } from "emailjs-com";
+import emailjs from "emailjs-com";
 import ContactFrom from './form/ContactForm';
 
 function Contact() {
-
+  
   const [contact, setContact] = useState({
     user_name: "",
     user_lastName: "",

@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import slugify from "slugify";
-import { dummyArticle } from "../../../data/dummyArticle";
 import styles from "./Articles.module.css";
-import unfetch from "isomorphic-fetch";
 
 function Articles({ articles }) {
   return (

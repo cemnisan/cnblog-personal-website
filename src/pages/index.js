@@ -1,5 +1,5 @@
 import Layout from "../layout/layout";
-import Home from "../components/Home/Home";
+import {Home} from "../components/Home";
 import unfetch from "isomorphic-fetch";
 
 function Index({ lastArticles }) {

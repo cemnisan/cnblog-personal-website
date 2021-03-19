@@ -1,5 +1,5 @@
 import styles from './navbar.module.css';
-import {itemLink} from "../../data/itemLinks";
+import itemLinks from "../../data/itemLinks.json";
 
 function Navbar(){
     return(
@@ -13,7 +13,7 @@ function Navbar(){
                 </div>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className={`navbar-nav ms-auto ${styles.navUl}`}>
-                        {itemLink.map((item,index) =>(
+                        {itemLink.link.map((item,index) =>(
                             <li key={index}  className="nav-item active">
                                 <a className={`${styles.item} nav-link`} href={item.href}>{item.title}</a>
                             </li>
