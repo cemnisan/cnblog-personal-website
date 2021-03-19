@@ -20,11 +20,13 @@
     "axios": "^0.21.1",
     "bootstrap": "^5.0.0-beta2",
     "emailjs-com": "^2.6.4",
+    "isomorphic-fetch": "^3.0.0",
     "next": "^10.0.9",
     "next-images": "^1.7.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-query": "^3.12.3",
-    "slugify": "^1.4.7"
+    "slugify": "^1.4.7",
+    "unfetch": "^4.2.0"
   }
 }

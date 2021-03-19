@@ -1,28 +1,9 @@
 import React from 'react';
-import Link from "next/link";
-import slugify from 'slugify';
+import HomeArticle from './HomeArticle';
 import styles from './Articles.module.css';
-import {dummyArticle} from '../../../../data/dummyArticle';
 
-function HomeArticle() {
-    const itemArticle = dummyArticle && dummyArticle.map((item, index) => (
-        <React.Fragment key={index}>
-            <div className="articleTitle d-flex">
-                <h4 className="px-2">{item.title}</h4>
-                <p className={`${styles.articleDate}`} id="articleDate">{item.date}</p>
-            </div>
-            <div className="articleContent px-2 mb-4">
-                <p id="articleContent ">{item.content}</p>
-
-            </div>
-
-            <div className="articleButton d-flex justify-content-end">
-                <Link href={`/articles/${item.id}/${slugify(item.title, { lower: true })}`}><h6 className="btn btn-dark">Detail</h6></Link>
-            </div>
-            <hr/>
-        </React.Fragment>
-    ))
-
+function HomeArticles({lastArticles}) {
+    
     return (
         <div className="container mt-5 py-5">
             <div className="article px-2 d-flex justify-content-between">
@@ -30,10 +11,10 @@ function HomeArticle() {
                 <a className={`${styles.articleMore}`} href="https://github.com/cemnisan" target="_blank" rel="noreferrer"><h6>More</h6></a>
             </div>
             <div className="articles mt-4">
-                {itemArticle}
+                <HomeArticle lastArticles={lastArticles}/>
             </div>
         </div>
     )
 }
 
-export default HomeArticle;
+export default HomeArticles;

@@ -1,7 +1,8 @@
 import React from 'react';
 import Articles from './Articles';
 
-function Article() {
+function Article({articles}) {
+    console.log(articles);
     return (
         <React.Fragment>
             <div className="container mt-5">
@@ -10,7 +11,7 @@ function Article() {
                     <hr/>
                 </div>
                 <div className="row mt-5 py-3">
-                    <Articles/>
+                    <Articles articles={articles}/>
                 </div>
             </div>
         </React.Fragment>
