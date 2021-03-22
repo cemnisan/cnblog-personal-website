@@ -1,5 +1,5 @@
 import styles from './Info.module.css';
-import cemnisan from '../../../../data/image/cemnisan.jpg'
+import cemnisan from '../../../../assets/cemnisan.jpg'
 
 function Info() {
     return (

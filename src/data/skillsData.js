@@ -1,9 +1,9 @@
-import svgJs from './image/js.svg';
-import svgNode from './image/nodejs.svg';
-import svgReact from './image/react.svg';
-import svgExpress from './image/express.svg';
-import svgMongo from './image/mongodb.svg';
-import svgPostgre from './image/postgresql.svg'
+import svgJs from '../assets/js.svg';
+import svgNode from '../assets/nodejs.svg';
+import svgReact from '../assets/react.svg';
+import svgExpress from '../assets/express.svg';
+import svgMongo from '../assets/mongodb.svg';
+import svgPostgre from '../assets/postgresql.svg'
 
 export const skillsData = [
     {"language":"JavaScript","svg":svgJs},

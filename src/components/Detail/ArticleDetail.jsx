@@ -1,8 +1,7 @@
 import styles from "./Detail.module.css";
 import ReactMarkdown from "react-markdown";
 import { readingTime } from "../../utilities/readingTimeCal";
-import cemnisan from "../../data/image/cemnisan.jpg";
-
+import cemnisan from "../../assets/cemnisan.jpg";
 
 function Detail({ article }) {
   return (
@@ -50,7 +49,7 @@ function Detail({ article }) {
               children={article.content}
               className={styles.articleParagph}
               transformImageUri={(uri) =>
-                uri.startsWith("http") ? uri : `${process.env.API_URL}${uri}`
+                uri.startsWith("http") ? uri : `${process.env.NEXT_PUBLIC_API_URL}${uri}`
               }
             ></ReactMarkdown>
           </div>

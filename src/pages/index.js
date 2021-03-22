@@ -11,7 +11,7 @@ function Index({ lastArticles }) {
 }
 
 export async function getStaticProps() {
-  const res = await unfetch("http://localhost:1337/posts");
+  const res = await unfetch(`${process.env.NEXT_PUBLIC_API_URL}/posts`);
   const lastArticles = await res.json();
   return {
     props: {
