@@ -2,9 +2,9 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
 import slugify from "slugify";
+import {readingTime} from '../../../utilities/readingTimeCal';
 import styles from "./Articles.module.css";
 
-const API_URL = "http://localhost:1337";
 
 function Articles({ articles }) {
   return (
@@ -27,13 +27,13 @@ function Articles({ articles }) {
                 </Link>
               </div>
               <div className="articleContent">
-                  <ReactMarkdown
-                    children={item.content}
-                    className={styles.articlesParagph}
-                    transformImageUri={(uri) =>
-                      uri.startsWith("http") ? uri : `${API_URL}${uri}`
-                    }
-                  ></ReactMarkdown>
+                <ReactMarkdown
+                  children={item.content}
+                  className={styles.articlesParagph}
+                  transformImageUri={(uri) =>
+                    uri.startsWith("http") ? uri : `${process.env.API_URL}${uri}`
+                  }
+                ></ReactMarkdown>
               </div>
               <div className="readMore d-flex justify-content-start mb-4">
                 <Link
@@ -43,12 +43,12 @@ function Articles({ articles }) {
                   }`}
                 >
                   <h6 className={`mt-4 ${styles.detail}`}>
-                    Read More
+                    Read More<span className="px-2">·</span>
+                    {`${readingTime(item.content)}`} min read
                   </h6>
                 </Link>
-                
               </div>
-              <hr/>
+              <hr />
             </div>
           </React.Fragment>
         ))}

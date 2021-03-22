@@ -1,9 +1,8 @@
 import styles from "./Detail.module.css";
 import ReactMarkdown from "react-markdown";
-import {readingTime} from '../../utilities/readingTimeCal';
+import { readingTime } from "../../utilities/readingTimeCal";
 import cemnisan from "../../data/image/cemnisan.jpg";
 
-const API_URL = "http://localhost:1337";
 
 function Detail({ article }) {
   return (
@@ -23,7 +22,8 @@ function Detail({ article }) {
             <p className={`px-2 ${styles.author}`}>Cem</p>
             <p className={`${styles.date}`}>
               {article.date}
-              <span className="px-2">·</span>{`${readingTime(article.content)}`} min read
+              <span className="px-2">·</span>
+              {`${readingTime(article.content)}`} min read
             </p>
           </div>
         </div>
@@ -50,7 +50,7 @@ function Detail({ article }) {
               children={article.content}
               className={styles.articleParagph}
               transformImageUri={(uri) =>
-                uri.startsWith("http") ? uri : `${API_URL}${uri}`
+                uri.startsWith("http") ? uri : `${process.env.API_URL}${uri}`
               }
             ></ReactMarkdown>
           </div>

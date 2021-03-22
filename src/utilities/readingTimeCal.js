@@ -1,4 +1,4 @@
-export function readingTime(content = "", readingSpeed = 2) {
+export function readingTime(content = "", readingSpeed = 3.5) {
   let maxSecond = 50;
   let oneMinute = 60;
   let totalSecondsInOneHour = 3600;
