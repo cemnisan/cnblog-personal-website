@@ -49,7 +49,9 @@ function Detail({ article }) {
               children={article.content}
               className={styles.articleParagph}
               transformImageUri={(uri) =>
-                uri.startsWith("http") ? uri : `${process.env.NEXT_PUBLIC_API_URL}${uri}`
+                uri.startsWith("http")
+                  ? uri
+                  : `${process.env.NEXT_PUBLIC_API_URL}${uri}`
               }
             ></ReactMarkdown>
           </div>

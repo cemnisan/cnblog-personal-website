@@ -1,18 +1,18 @@
-.projectTitle > a{
-    color:black;
-    text-decoration: none;
+.projectTitle > a {
+  color: black;
+  text-decoration: none;
 }
 
-.projectContent > p{
-    color: #555572;
-    font-size:18px;
+.projectContent > p {
+  font-size: 18px;
 }
 
-.projectMore{
-    text-decoration: none;
-    color:black;
+.projectMore {
+  text-decoration: none;
+  color: black;
 }
 
-.projectHr{
-    width: 10em;
+
+.projectHr {
+  width: 10em;
 }

@@ -5,13 +5,13 @@ import Skills from "./components/skills/Skills";
 
 function Home({ lastArticles }) {
   return (
-    <>
+    <div className="container">
       <Info />
       <Projects />
       <Skills />
-      <HomeArticles lastArticles={lastArticles}/>
-    </>
+      <HomeArticles lastArticles={lastArticles} />
+    </div>
   );
 }
 
-export {Home,Info,Projects,HomeArticles,Skills};
+export { Home, Info, Projects, HomeArticles, Skills };

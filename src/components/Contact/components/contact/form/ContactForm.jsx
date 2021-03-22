@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import styles from "../Contact.module.css";
-import formData from '../../../../../data/FormData.json';
+import formData from "../../../../../data/FormData.json";
 
 function ContactForm({ onChange }) {
   return (

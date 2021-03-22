@@ -7,9 +7,16 @@
   cursor: pointer;
 }
 
-.articlesDate h6 {
+.author{
+  padding-left: 8px;
+  color:rgba(26, 137, 23, 1);
+}
+
+.date{
   color: #6c757d;
-  font-size: 14px;
+  font-size: 15px;
+  padding-top: 2px;
+  padding-left: 8px;
 }
 
 .articlesParagph {
