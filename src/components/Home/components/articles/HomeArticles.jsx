@@ -6,9 +6,8 @@ function HomeArticles({lastArticles}) {
     
     return (
         <div className="container mt-5 py-5">
-            <div className="article px-2 d-flex justify-content-between">
+            <div className="article  d-flex justify-content-between">
                 <h5>My Last 3 Articles</h5>
-                <a className={`${styles.articleMore}`} href="https://github.com/cemnisan" target="_blank" rel="noreferrer"><h6>More</h6></a>
             </div>
             <div className="articles mt-4">
                 <HomeArticle lastArticles={lastArticles}/>

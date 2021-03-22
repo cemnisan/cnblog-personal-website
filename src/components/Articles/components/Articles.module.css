@@ -1,11 +1,77 @@
-.articlesDate{
-    color: #6c757d;
-    font-size: 14px;
-    margin-left: 4px;
-    text-align: center;
+.container {
+  margin: auto;
+  width: 600px;
 }
 
-.articlesParagph{
-   font-size: 16px;
-    text-align: center;
+.articleTitle {
+  cursor: pointer;
+}
+
+.articlesDate h6 {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.articlesParagph {
+  font-size: 16px;
+}
+
+.articlesParagph {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6; /* kaç satırla sınırlayacağımızı yazıyoruz */
+  -webkit-box-orient: vertical;
+}
+
+.articlesParagph img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-bottom: 0.3em;
+}
+
+.detail {
+  color: rgba(26, 137, 23, 1);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 677px) and (min-width: 130px) {
+  .articleParagph img {
+    width: 100%;
+    max-width: 470px;
+    height: auto;
+  }
+  .articleParagph p {
+    width: 100%;
+    max-width: 470px;
+    height: auto;
+  }
+  .headerTitle {
+    width: 100%;
+    max-width: 470px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 486px) and (min-width: 1px) {
+  .articleParagph img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+  .articleParagph p {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+  }
+  .headerTitle {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+  }
+  .articleTitle{
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+  }
 }

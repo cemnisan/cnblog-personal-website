@@ -1,5 +1,5 @@
 import Layout from "../layout/layout";
-import {Home} from "../components/Home";
+import { Home } from "../components/Home";
 import unfetch from "isomorphic-fetch";
 
 function Index({ lastArticles }) {
@@ -10,14 +10,14 @@ function Index({ lastArticles }) {
   );
 }
 
-/*export async function getStaticProps() {
+export async function getStaticProps() {
   const res = await unfetch("http://localhost:1337/posts");
   const lastArticles = await res.json();
   return {
     props: {
-        lastArticles,
+      lastArticles,
     },
   };
-}*/
+}
 
 export default Index;

@@ -1,41 +1,58 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 import Link from "next/link";
 import slugify from "slugify";
 import styles from "./Articles.module.css";
 
+const API_URL = "http://localhost:1337";
+
 function Articles({ articles }) {
   return (
-    /*<React.Fragment>
+    <React.Fragment>
       {articles &&
         articles.map((item, index) => (
           <React.Fragment key={index}>
-            <div className="col-md-12">
-              <div className="articleDate">
-                <h6 className={styles.articlesDate}>{item.date}</h6>
+            <div>
+              <div className={styles.articlesDate}>
+                <h6>{item.date}</h6>
               </div>
-              <div className="articleTitle text-center">
-                <h2>{item.title}</h2>
-              </div>
-              <div className="articleContent mt-3">
-                <p id="articleContent" className={styles.articlesParagph}>
-                  {item.content}
-                </p>
-              </div>
-              <div className="readMore d-flex justify-content-end">
+              <div className={`${styles.articleTitle} mb-3`}>
                 <Link
                   href="/articles/[slug]"
                   as={`/articles/${slugify(item.title, { lower: true })}-${
                     item.id
                   }`}
                 >
-                  <h6 className="btn btn-dark">Detail</h6>
+                  <h1 className="mt-3">{item.title}</h1>
                 </Link>
               </div>
+              <div className="articleContent">
+                  <ReactMarkdown
+                    children={item.content}
+                    className={styles.articlesParagph}
+                    transformImageUri={(uri) =>
+                      uri.startsWith("http") ? uri : `${API_URL}${uri}`
+                    }
+                  ></ReactMarkdown>
+              </div>
+              <div className="readMore d-flex justify-content-start mb-4">
+                <Link
+                  href="/articles/[slug]"
+                  as={`/articles/${slugify(item.title, { lower: true })}-${
+                    item.id
+                  }`}
+                >
+                  <h6 className={`mt-4 ${styles.detail}`}>
+                    Read More
+                  </h6>
+                </Link>
+                
+              </div>
+              <hr/>
             </div>
           </React.Fragment>
         ))}
-    </React.Fragment>*/
-    <></>
+    </React.Fragment>
   );
 }
 

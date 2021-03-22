@@ -1,0 +1,58 @@
+.container{
+    margin: auto;
+    width: 600px;
+}
+
+.author{
+    color:rgba(26, 137, 23, 1);
+    
+}
+
+.date{
+    color:rgba(117, 117, 117, 1);
+}
+
+.articleParagph h3{
+    margin-bottom: 1em;
+}
+.articleParagph h4{
+    margin-bottom: 1em;
+}
+.articleParagph h2{
+    margin-bottom: 1em;
+}
+
+.articleParagph img{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 0.3em;
+}
+
+.articleParagph p{
+    margin-bottom: 1em;
+    font-size: 18px;
+    
+}
+
+@media screen and (max-width: 677px) and (min-width: 130px){
+    .articleParagph img{
+        width: 100%;
+        max-width: 470px;
+        height: auto;
+    }
+    .articleParagph p{
+        width: 100%;
+        max-width: 470px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 121px) and (min-width: 1px){
+    .articleParagph img{
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+    }
+}
+

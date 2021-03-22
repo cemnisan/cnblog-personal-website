@@ -1,40 +1,62 @@
 import styles from "./Detail.module.css";
+import ReactMarkdown from "react-markdown";
+import {readingTime} from '../../utilities/readingTimeCal';
+import cemnisan from "../../data/image/cemnisan.jpg";
 
-const API_URL = 'http://localhost:1337'
+const API_URL = "http://localhost:1337";
 
 function Detail({ article }) {
   return (
-    /*<div className="container">
+    <div className={`container ${styles.container}`}>
       <div className="row">
-        <div className="col-md-12 title">
-          <h1 className="text-center">{article.title}</h1>
+        <div className="title">
+          <h1 className="mt-5">{article.title}</h1>
         </div>
-        <div className="col-md-12 mt-4 content text-center">
-          <p>
-            {article.content} 
-          </p>
+        <div className={` ${styles.row}`}>
+          <div className="d-flex  mt-3">
+            <img
+              className="rounded-circle"
+              src={cemnisan}
+              width={28}
+              height={28}
+            ></img>
+            <p className={`px-2 ${styles.author}`}>Cem</p>
+            <p className={`${styles.date}`}>
+              {article.date}
+              <span className="px-2">·</span>{`${readingTime(article.content)}`} min read
+            </p>
+          </div>
         </div>
-        <div className="col-md-12 mt-2 article-img text-center">
-          {article.image.map((item,index) =>{
+        {article.image.length > 0 ? (
+          <div className="mt-2 article-img text-center">
+            {article.image.map((item, index) => {
               console.log(item);
-              return(
+              return (
                 <img
-                src={API_URL + item.url}
-                className="img-fluid rounded"
-                alt={`${item.name}`}
-              />
-              )
-          })}
-        </div>
-        <div className="col-md-12 content">
-          <p className="mt-4 text-center">
-            {article.content}
-          </p>
+                  key={index}
+                  src={API_URL + item.url}
+                  className={`img-fluid rounded ${styles.articleImg}`}
+                  alt={`${item.name}`}
+                />
+              );
+            })}
+          </div>
+        ) : (
+          <></>
+        )}
+        <div className={styles.markRow}>
+          <div className="mt-3">
+            <ReactMarkdown
+              children={article.content}
+              className={styles.articleParagph}
+              transformImageUri={(uri) =>
+                uri.startsWith("http") ? uri : `${API_URL}${uri}`
+              }
+            ></ReactMarkdown>
+          </div>
         </div>
       </div>
-    </div>*/
-    <>
-    </>
+    </div>
   );
 }
 

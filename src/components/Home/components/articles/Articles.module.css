@@ -3,6 +3,10 @@
     color:black;
 }
 
+.articleTitle{
+    cursor: pointer;
+}
+
 .articleDate{
     color: #555572;
     font-size: 13px;
