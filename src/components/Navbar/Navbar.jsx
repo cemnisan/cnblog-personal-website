@@ -13,7 +13,7 @@ function Navbar() {
           </NavBar.Brand>
           <NavBar.Toggle aria-controls="basic-navbar-nav" />
           <NavBar.Collapse className="px-4" id="basic-navbar-nav">
-            <Nav className="ms-auto">
+            <Nav className="ml-auto">
               {itemLinks.link.map((item, index) => (
                 <React.Fragment key={index}>
                   <Nav.Link href={item.href}>

@@ -29,11 +29,10 @@ function Detail({ article }) {
         {article.image.length > 0 ? (
           <div className="mt-2 article-img text-center">
             {article.image.map((item, index) => {
-              console.log(item);
               return (
                 <img
                   key={index}
-                  src={API_URL + item.url}
+                  src={process.env.NEXT_PUBLIC_API_URL + item.url}
                   className={`img-fluid rounded ${styles.articleImg}`}
                   alt={`${item.name}`}
                 />

@@ -9,28 +9,49 @@ function HomeArticle({ lastArticles }) {
       {lastArticles &&
         lastArticles.map((item, index) => (
           <React.Fragment key={index}>
-            <div className={`${styles.articleTitle} d-flex`}>
-              <Link
-                href="/articles/[slug]"
-                as={`/articles/${slugify(item.title, { lower: true })}-${
-                  item.id
-                }`}
-              >
-                <h4 className="mt-3">{item.title}</h4>
-              </Link>
-              <p className={`${styles.articleDate} px-3 my-3`} id="articleDate">
-                {item.date}
-              </p>
+            <div className="row lastArticles d-flex">
+              <div className={`col-sm-6 col-md-6  col-lg-4 imageArticle`}>
+                {item.image &&
+                  item.image.map((item, index) => (
+                    <img
+                      key={index}
+                      className={`rounded ${styles.image}`}
+                      width={246}
+                      height={180}
+                      src={`${process.env.NEXT_PUBLIC_API_URL + item.url}`}
+                      alt="..."
+                    />
+                  ))}
+              </div>
+              <div className={`col-sm-9 col-md-6 col-lg-8 px-3 mt-1 ${styles.articleTitle}`}>
+                <Link
+                  href="/articles/[slug]"
+                  as={`/articles/${slugify(item.title, { lower: true })}-${
+                    item.id
+                  }`}
+                >
+                  <h3 className="mb-3">{item.title}</h3>
+                </Link>
+                <div className="d-flex">
+                  <p className={`rounded-pill ${styles.articleDate}`}>
+                    {item.date.slice(0, 4)}
+                  </p>
+                  <p className={`px-3 ${styles.articleSubject}`}>
+                    <span>{item.hasthag.replace("#", "").slice(0, 4)}</span>
+                  </p>
+                </div>
+                <p className={styles.content}>{item.content.slice(item.content.indexOf(".jpg)") + 5)}</p>
+              </div>
             </div>
-            <div className="articleButton d-flex justify-content-end">
-              <a
+            <div className={`d-flex justify-content-end ${styles.moreArticle}`}>
+              <Link
                 className={`${styles.articleMore}`}
                 href={`/articles/${slugify(item.title, { lower: true })}-${
                   item.id
                 }`}
               >
                 <h6>Read More...</h6>
-              </a>
+              </Link>
             </div>
             <hr />
           </React.Fragment>

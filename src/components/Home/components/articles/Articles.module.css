@@ -1,14 +1,68 @@
-.articleMore{
-    text-decoration: none;
-    color:black;
+.articleTitle h3 {
+  color: #21243d;
+  cursor: pointer;
 }
 
-.articleTitle{
-    cursor: pointer;
+.image{
+  width: 350px;
+  height: 220px;
 }
 
-.articleDate{
-    color: #555572;
-    font-size: 13px;
-    padding-top: 0.4em;
+.articleTitle p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* kaç satırla sınırlayacağımızı yazıyoruz */
+  -webkit-box-orient: vertical;
 }
+
+.articleDate {
+  width: 62px;
+  height: 25px;
+  color: white;
+  border: 1px solid;
+  background-color: #142850;
+  text-align: center;
+}
+
+.articleSubject {
+  color: #8695a4;
+}
+
+.moreArticle {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 765px) and (min-width: 100px) {
+  .articleTitle p {
+    -webkit-line-clamp: 4; /* kaç satırla sınırlayacağımızı yazıyoruz */
+  }
+  .articleTitle h3 {
+    font-size: 20px;
+  }
+  
+}
+
+@media screen and (max-width:767px) and (min-width:414px){
+  .image{
+    width: 370px;
+    height: 220px;
+  }
+}
+
+@media screen and (max-width:991px) and (min-width:700px){
+  .image{
+    width: 330px;
+    height: 200px;
+  }
+  .articleTitle p {
+    -webkit-line-clamp: 3; /* kaç satırla sınırlayacağımızı yazıyoruz */
+  }
+}
+
+@media screen and (max-width:1199px) and (min-width:992px){
+  .image{
+    width:300px;
+    height: 210px;
+  }
+}
+
