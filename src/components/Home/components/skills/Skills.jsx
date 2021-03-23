@@ -28,7 +28,7 @@ function HomeSkills() {
       <div className="skillsHeader">
         <div className="container">
           <div className="col-md-12 skillsTitle">
-            <h2 className="text-center">Skills</h2>
+            <h2 className="text-center mb-3">Skills</h2>
           </div>
           <div className="row">{itemSkills}</div>
         </div>

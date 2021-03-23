@@ -1,3 +1,7 @@
+.projectHeader{
+  background-color: #EDF7FA;
+}
+
 .projectTitle > a {
   color: black;
   text-decoration: none;
@@ -11,6 +15,7 @@
   text-decoration: none;
   color: black;
 }
+
 
 
 .projectHr {

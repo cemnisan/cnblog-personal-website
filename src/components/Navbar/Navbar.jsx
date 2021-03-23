@@ -8,11 +8,11 @@ function Navbar() {
     <React.Fragment>
       <Container className="mt-2">
         <NavBar bg="white" expand="lg">
-          <NavBar.Brand className="navbar-brand px-4" href="/">
+          <NavBar.Brand className="navbar-brand" href="/">
             CNBlog
           </NavBar.Brand>
           <NavBar.Toggle aria-controls="basic-navbar-nav" />
-          <NavBar.Collapse className="px-4" id="basic-navbar-nav">
+          <NavBar.Collapse  id="basic-navbar-nav">
             <Nav className="ml-auto">
               {itemLinks.link.map((item, index) => (
                 <React.Fragment key={index}>
