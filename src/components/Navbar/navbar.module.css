@@ -1,27 +1,6 @@
-.brand{
-    color:black;
-}
-
-.item{
-    color:black;
-    font-family: 'adobe-clean, sans-serif, arial';
+.navbrand{
+    font-size: 16px;
+    
 }
 
 
-@media screen and (max-width: 991px) and (min-width:769px){
-    .brand{
-        margin:0px auto;
-    }
-}
-
-@media screen and (max-width: 520px) and (min-width:100px){
-    .brand{
-        margin-left: 8.4em;
-    }
-}
-
-@media screen and (max-width: 767px) and (min-width:520px){
-    .brand{
-        margin-left: 11.5em;
-    }
-}

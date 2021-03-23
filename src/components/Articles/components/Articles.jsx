@@ -13,17 +13,6 @@ function Articles({ articles }) {
         articles.map((item, index) => (
           <React.Fragment key={index}>
             <div>
-              <div className={`d-flex ${styles.articlesDate} mt-2`}>
-                <img
-                  className="rounded-circle"
-                  height={28}
-                  width={28}
-                  src={cemnisan}
-                  alt="..."
-                />
-                <p className={styles.author}>Cem</p>
-                <p className={styles.date}>{item.date}</p>
-              </div>
               <div className={`${styles.articleTitle} mb-3`}>
                 <Link
                   href="/articles/[slug]"
@@ -33,6 +22,17 @@ function Articles({ articles }) {
                 >
                   <h1 className="mt-1">{item.title}</h1>
                 </Link>
+              </div>
+              <div className={`d-flex ${styles.articlesDate} mt-2 mb-2`}>
+                <img
+                  className="rounded-circle"
+                  height={28}
+                  width={28}
+                  src={cemnisan}
+                  alt="..."
+                />
+                <p className={styles.author}>Cem</p>
+                <p className={styles.date}>{item.date}</p>
               </div>
               <div className="articleContent">
                 <ReactMarkdown
