@@ -45,7 +45,7 @@
 @media screen and (max-width: 677px) and (min-width: 130px) {
   .articlesImg img {
     width: 100%;
-    max-width: 470px;
+    max-width: 450px;
     height: auto;
   }
   .articlesContent p {
