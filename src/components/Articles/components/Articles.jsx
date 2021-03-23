@@ -20,7 +20,7 @@ function Articles({ articles }) {
                     item.id
                   }`}
                 >
-                  <h1 className="mt-1">{item.title}</h1>
+                  <h2 className="mt-1">{item.title}</h2>
                 </Link>
               </div>
               <div className={`d-flex ${styles.articlesDate} mt-2 mb-2`}>
@@ -34,16 +34,20 @@ function Articles({ articles }) {
                 <p className={styles.author}>Cem</p>
                 <p className={styles.date}>{item.date}</p>
               </div>
-              <div className="articleContent">
-                <ReactMarkdown
-                  children={item.content}
-                  className={styles.articlesParagph}
-                  transformImageUri={(uri) =>
-                    uri.startsWith("http")
-                      ? uri
-                      : `${process.env.NEXT_PUBLIC_API_URL}${uri}`
-                  }
-                ></ReactMarkdown>
+              <div className={styles.articlesImg} key={index}>
+                {item.image &&
+                  item.image.map((item, index) => (
+                    <React.Fragment key={index}>
+                      <img
+                        src={`${process.env.NEXT_PUBLIC_API_URL + item.url}`}
+                        alt="..."
+                      />
+                    </React.Fragment>
+                  ))}
+              </div>
+              {console.log(item)}
+              <div className={styles.articlesContent}>
+                <p className="mt-2">{item.content}</p>
               </div>
               <div className="readMore d-flex justify-content-start mb-4">
                 <Link
@@ -52,7 +56,7 @@ function Articles({ articles }) {
                     item.id
                   }`}
                 >
-                  <h6 className={`mt-4 ${styles.detail}`}>
+                  <h6 className={`mt-2 ${styles.detail}`}>
                     Read More<span className="px-2">·</span>
                     {`${readingTime(item.content)}`} min read
                   </h6>

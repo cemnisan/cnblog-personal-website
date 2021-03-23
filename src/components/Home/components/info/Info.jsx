@@ -6,7 +6,7 @@ function Info() {
     <>
       <div className={`${styles.container} container`}>
         <div className="row">
-          <div className="col-md-7 mb-4">
+          <div className="col-sm-12 order-last order-xs-12 order-sm-12 order-md-12 order-lg-1 col-md-12 col-lg-7">
             <div className="homeTitle">
               <h1>Hi! I'm Cem NİSAN</h1>
               <h4>Full-Stack Web Developer</h4>
@@ -24,7 +24,7 @@ function Info() {
               </p>
             </div>
           </div>
-          <div className="col-md-5 px-5">
+          <div className="col-sm-12 order-first order-sm-1 order-md-1 order-lg-12 col-md-12 col-lg-5 mb-4 px-5">
             <div className={styles.homeImg}>
               <img src={cemnisan} alt="..." />
             </div>

@@ -19,20 +19,20 @@
   padding-left: 8px;
 }
 
-.articlesParagph {
+.articlesContent p{
   font-size: 16px;
 }
 
-.articlesParagph {
+.articlesContent p{
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 6; /* kaç satırla sınırlayacağımızı yazıyoruz */
   -webkit-box-orient: vertical;
 }
 
-.articlesParagph img {
+.articlesImg img {
   width: 100%;
-  max-width: 600px;
+  max-width: 585px;
   height: auto;
   margin-bottom: 0.3em;
 }
@@ -43,12 +43,12 @@
 }
 
 @media screen and (max-width: 677px) and (min-width: 130px) {
-  .articleParagph img {
+  .articlesImg img {
     width: 100%;
     max-width: 470px;
     height: auto;
   }
-  .articleParagph p {
+  .articlesContent p {
     width: 100%;
     max-width: 470px;
     height: auto;
@@ -58,15 +58,19 @@
     max-width: 470px;
     height: auto;
   }
+  .container {
+    margin: auto;
+    width: 400px;
+  }
 }
 
-@media screen and (max-width: 486px) and (min-width: 1px) {
-  .articleParagph img {
+@media screen and (max-width: 486px) and (min-width: 458px) {
+  .articlesImg img {
     width: 100%;
     max-width: 350px;
     height: auto;
   }
-  .articleParagph p {
+  .articlesContent p {
     width: 100%;
     max-width: 340px;
     height: auto;
@@ -80,5 +84,30 @@
     width: 100%;
     max-width: 340px;
     height: auto;
+  }
+  .container {
+    margin: auto;
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 459px) {
+  .container {
+    margin: auto;
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 394px) {
+  .container {
+    margin: auto;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 318px) {
+  .container {
+    margin: auto;
+    width: 270px;
   }
 }

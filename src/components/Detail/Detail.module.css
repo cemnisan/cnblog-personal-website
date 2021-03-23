@@ -36,6 +36,10 @@
 }
 
 @media screen and (max-width: 677px) and (min-width: 130px){
+    .container{
+        margin: auto;
+        width: 400px;
+    }
     .articleParagph img{
         width: 100%;
         max-width: 470px;
@@ -46,13 +50,23 @@
         max-width: 470px;
         height: auto;
     }
-}
-
-@media screen and (max-width: 121px) and (min-width: 1px){
-    .articleParagph img{
+    .articleImg{
         width: 100%;
-        max-width: 450px;
+        max-width: 470px;
         height: auto;
     }
 }
 
+@media screen and (max-width: 422px){
+    .container{
+        margin: auto;
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 376px){
+    .container{
+        margin: auto;
+        width: 300px;
+    }
+}

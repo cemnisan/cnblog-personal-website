@@ -33,7 +33,7 @@ function Detail({ article }) {
                 <img
                   key={index}
                   src={process.env.NEXT_PUBLIC_API_URL + item.url}
-                  className={`img-fluid rounded ${styles.articleImg}`}
+                  className={`img-fluid  ${styles.articleImg}`}
                   alt={`${item.name}`}
                 />
               );

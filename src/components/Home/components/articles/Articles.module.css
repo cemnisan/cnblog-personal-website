@@ -3,7 +3,7 @@
   cursor: pointer;
 }
 
-.image{
+.image {
   width: 350px;
   height: 220px;
 }
@@ -32,37 +32,38 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 765px) and (min-width: 100px) {
-  .articleTitle p {
-    -webkit-line-clamp: 4; /* kaç satırla sınırlayacağımızı yazıyoruz */
-  }
-  .articleTitle h3 {
-    font-size: 20px;
-  }
-  
-}
 
-@media screen and (max-width:767px) and (min-width:414px){
-  .image{
-    width: 370px;
-    height: 220px;
+@media screen and (max-width: 376px) {
+  .image {
+    width: 320px;
+    height: 200px;
+    margin-bottom: 1em;
   }
 }
 
-@media screen and (max-width:991px) and (min-width:700px){
-  .image{
+@media screen and (max-width: 699px) and (min-width: 471px) {
+  .image {
+    width: 450px;
+    height: 230px;
+    margin-bottom: 1em;
+  }
+}
+
+
+@media screen and (max-width: 991px) and (min-width: 701px) {
+  .image {
     width: 330px;
     height: 200px;
+    margin-bottom: 1em;
   }
   .articleTitle p {
     -webkit-line-clamp: 3; /* kaç satırla sınırlayacağımızı yazıyoruz */
   }
 }
 
-@media screen and (max-width:1199px) and (min-width:992px){
-  .image{
-    width:300px;
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+  .image {
+    width: 300px;
     height: 210px;
   }
 }
-

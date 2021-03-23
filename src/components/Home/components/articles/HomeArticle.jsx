@@ -23,7 +23,7 @@ function HomeArticle({ lastArticles }) {
                     />
                   ))}
               </div>
-              <div className={`col-sm-9 col-md-6 col-lg-8 px-3 mt-1 ${styles.articleTitle}`}>
+              <div className={`col-sm-12 col-md-6 col-lg-8 px-3 mt-1 ${styles.articleTitle}`}>
                 <Link
                   href="/articles/[slug]"
                   as={`/articles/${slugify(item.title, { lower: true })}-${
@@ -40,7 +40,7 @@ function HomeArticle({ lastArticles }) {
                     <span>{item.hasthag.replace("#", "").slice(0, 4)}</span>
                   </p>
                 </div>
-                <p className={styles.content}>{item.content.slice(item.content.indexOf(".jpg)") + 5)}</p>
+                <p className={styles.content}>{item.content}</p>
               </div>
             </div>
             <div className={`d-flex justify-content-end ${styles.moreArticle}`}>

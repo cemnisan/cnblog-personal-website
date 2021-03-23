@@ -5,7 +5,6 @@ import styles from './Project.module.css'
 import { iconsData } from "../../../../data/iconsData";
 
 function ProjectCard({ item }) {
-  console.log(iconsData[0]);
   const { err, data } = useQuery("repoData" + item, () =>
     fetch(item).then((res) => res.json())
   );
@@ -16,10 +15,9 @@ function ProjectCard({ item }) {
         <React.Fragment>
           <div className="col-md-6 mb-5">
             <div className={`${styles.card} card`}>
-              {console.log(data)}
               <div className="card-body">
-                <h5 className="card-title mb-4 text-center">{data.name}</h5>
-                <h6 className="card-subtitle mb-3 text-muted text-center">
+                <h5 className="card-title  text-center">{data.name}</h5>
+                <h6 className="card-subtitle  text-muted text-center">
                   Language - {data.language}
                 </h6>
                 <p className="card-text text-center">{data.description}</p>

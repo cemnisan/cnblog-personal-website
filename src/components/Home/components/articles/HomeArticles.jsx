@@ -4,7 +4,7 @@ import styles from "./Articles.module.css";
 
 function HomeArticles({ lastArticles }) {
   return (
-    <div className="container mt-5 py-5">
+    <div className="container mt-5">
       <div className="article  d-flex justify-content-between">
         <h5>My Last 3 Articles</h5>
       </div>

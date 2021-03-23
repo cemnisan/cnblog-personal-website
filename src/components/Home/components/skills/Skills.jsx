@@ -33,6 +33,7 @@ function HomeSkills() {
           <div className="row">{itemSkills}</div>
         </div>
       </div>
+      <hr className="mt-5"/>
     </>
   );
 }
