@@ -3,7 +3,7 @@ import Link from "next/link";
 import slugify from "slugify";
 import styles from "./Articles.module.css";
 
-const API_URL = 'https://protected-badlands-53743.herokuapp.com'
+const API_URL = 'https://stormy-reef-38695.herokuapp.com'
 
 function HomeArticle({ lastArticles }) {
   return (

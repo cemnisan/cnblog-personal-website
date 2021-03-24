@@ -1,12 +1,12 @@
 import React from "react";
-import ReactMarkdown from "react-markdown";
+import moment from 'moment'
 import Link from "next/link";
 import slugify from "slugify";
 import cemnisan from "../../../assets/cemnisan.jpg";
 import { readingTime } from "../../../utilities/readingTimeCal";
 import styles from "./Articles.module.css";
 
-const API_URL = 'https://protected-badlands-53743.herokuapp.com'
+const API_URL = 'https://stormy-reef-38695.herokuapp.com'
 
 function Articles({ articles }) {
   return (
@@ -34,7 +34,7 @@ function Articles({ articles }) {
                   alt="..."
                 />
                 <p className={styles.author}>Cem</p>
-                <p className={styles.date}>{item.date}</p>
+                <p className={styles.date}>{moment(item.date).format("LL")}</p>
               </div>
               <div className={styles.articlesImg} key={index}>
                 {item.image &&
@@ -47,7 +47,6 @@ function Articles({ articles }) {
                     </React.Fragment>
                   ))}
               </div>
-              {console.log(item)}
               <div className={styles.articlesContent}>
                 <p className="mt-2">{item.content}</p>
               </div>
@@ -60,7 +59,7 @@ function Articles({ articles }) {
                 >
                   <h6 className={`mt-2 ${styles.detail}`}>
                     Read More<span className="px-2">·</span>
-                    {`${readingTime(item.content)}`} min read
+                    {`${readingTime(item.content)}`}
                   </h6>
                 </Link>
               </div>

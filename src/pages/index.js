@@ -11,7 +11,7 @@ function Index({ lastArticles }) {
 }
 
 export async function getStaticProps() {
-  const res = await unfetch(`https://protected-badlands-53743.herokuapp.com/posts`);
+  const res = await unfetch(`https://stormy-reef-38695.herokuapp.com/posts`);
   const lastArticles = await res.json();
   return {
     props: {

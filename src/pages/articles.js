@@ -11,7 +11,7 @@ function Articles({ articles }) {
 }
 
 export async function getStaticProps() {
-  const res = await unfecth(`https://protected-badlands-53743.herokuapp.com/posts`);
+  const res = await unfecth(`https://stormy-reef-38695.herokuapp.com/posts`);
   const articles = await res.json();
   return {
     props: {

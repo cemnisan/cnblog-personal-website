@@ -12,16 +12,16 @@ export function readingTime(content = "", readingSpeed = 3.5) {
     let second = parseInt(readingTime / 10);
     second++;
     second *= 10;
-    return `${second}`;
+    return `${second} seconds read`;
 
   } else if (readingTime < totalSecondsInOneHour) {
     let minute = Math.ceil(readingTime / oneMinute);
-    return `${minute}`;
+    return `${minute} min read `;
 
   } else {
 
     let hour = Math.floor(readingTime / totalSecondsInOneHOur);
-    return `${hour}`;
+    return `${hour} hours read`;
 
   }
 }

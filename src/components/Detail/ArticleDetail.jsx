@@ -1,9 +1,10 @@
-import styles from "./Detail.module.css";
 import ReactMarkdown from "react-markdown";
+import moment from 'moment';
 import { readingTime } from "../../utilities/readingTimeCal";
+import styles from "./Detail.module.css";
 import cemnisan from "../../assets/cemnisan.jpg";
 
-const API_URL = 'https://protected-badlands-53743.herokuapp.com';
+const API_URL = 'https://stormy-reef-38695.herokuapp.com';
 
 function Detail({ article }) {
   return (
@@ -22,9 +23,9 @@ function Detail({ article }) {
             ></img>
             <p className={`px-2 ${styles.author}`}>Cem</p>
             <p className={`${styles.date}`}>
-              {article.date}
+              {moment(article.date).format('LL')}
               <span className="px-2">·</span>
-              {`${readingTime(article.content)}`} min read
+              {`${readingTime(article.content)}`}
             </p>
           </div>
         </div>
