@@ -52,7 +52,7 @@ function Detail({ article }) {
               transformImageUri={(uri) =>
                 uri.startsWith("http")
                   ? uri
-                  : `${process.env.NEXT_PUBLIC_API_URL}${uri}`
+                  : `${API_URL}${uri}`
               }
             ></ReactMarkdown>
           </div>
