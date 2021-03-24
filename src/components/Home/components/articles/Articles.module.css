@@ -6,6 +6,7 @@
 .image {
   width: 350px;
   height: 220px;
+  margin-bottom: 1em;
 }
 
 .articleTitle p {
@@ -35,9 +36,22 @@
 
 @media screen and (max-width: 376px) {
   .image {
-    width: 320px;
+    width: 350px;
     height: 200px;
-    margin-bottom: 1em;
+  }
+  .articleTitle h3{
+    font-size: 22.7px;
+  
+  }
+}
+
+@media screen and (max-width:414px) and (min-width:377px){
+  .image{
+    width: 380px;
+    height: 230px;
+  }
+  .articleTitle h3{
+    font-size: 25px;
   }
 }
 
@@ -45,7 +59,6 @@
   .image {
     width: 450px;
     height: 230px;
-    margin-bottom: 1em;
   }
 }
 
@@ -54,7 +67,6 @@
   .image {
     width: 330px;
     height: 200px;
-    margin-bottom: 1em;
   }
   .articleTitle p {
     -webkit-line-clamp: 3; /* kaç satırla sınırlayacağımızı yazıyoruz */

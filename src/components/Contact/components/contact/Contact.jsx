@@ -37,7 +37,7 @@ function Contact() {
         .then(
           () => {
             alert(
-              "Mesajınız başarıyla gönderildi, size ek kısa zamanda dönüş yapacağım! ^_^ "
+              "Mesajınız başarıyla gönderildi, size en kısa zamanda dönüş yapacağım! ^_^ "
             );
             router.push("/");
           },
