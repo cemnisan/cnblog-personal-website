@@ -6,6 +6,8 @@ import cemnisan from "../../../assets/cemnisan.jpg";
 import { readingTime } from "../../../utilities/readingTimeCal";
 import styles from "./Articles.module.css";
 
+const API_URL = 'https://protected-badlands-53743.herokuapp.com'
+
 function Articles({ articles }) {
   return (
     <React.Fragment>
@@ -39,7 +41,7 @@ function Articles({ articles }) {
                   item.image.map((item, index) => (
                     <React.Fragment key={index}>
                       <img
-                        src={`${process.env.NEXT_PUBLIC_API_URL + item.url}`}
+                        src={`${API_URL + item.url}`}
                         alt="..."
                       />
                     </React.Fragment>

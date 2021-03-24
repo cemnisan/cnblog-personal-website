@@ -14,7 +14,7 @@ function ArticleDetail({ article }) {
 
 
 export async function getStaticPaths() {
-  const data = await unfecth(`${process.env.NEXT_PUBLIC_API_URL}/posts`)
+  const data = await unfecth(`https://protected-badlands-53743.herokuapp.com/posts`)
   const article = await data.json()
   return {
     paths: article.map((item) => {
@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const id = params.slug.split("-").slice(-1)[0]
-  const data = await unfecth(`${process.env.NEXT_PUBLIC_API_URL}/posts/`+ id)
+  const data = await unfecth(`https://protected-badlands-53743.herokuapp.com/posts/`+ id)
   const article = await data.json()
   return {
     props: {

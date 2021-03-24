@@ -11,7 +11,7 @@ function Articles({ articles }) {
 }
 
 export async function getStaticProps() {
-  const res = await unfecth(`${process.env.NEXT_PUBLIC_API_URL}/posts`);
+  const res = await unfecth(`https://protected-badlands-53743.herokuapp.com/posts`);
   const articles = await res.json();
   return {
     props: {

@@ -3,6 +3,8 @@ import ReactMarkdown from "react-markdown";
 import { readingTime } from "../../utilities/readingTimeCal";
 import cemnisan from "../../assets/cemnisan.jpg";
 
+const API_URL = 'https://protected-badlands-53743.herokuapp.com';
+
 function Detail({ article }) {
   return (
     <div className={`container ${styles.container}`}>
@@ -32,7 +34,7 @@ function Detail({ article }) {
               return (
                 <img
                   key={index}
-                  src={process.env.NEXT_PUBLIC_API_URL + item.url}
+                  src={API_URL + item.url}
                   className={`img-fluid  ${styles.articleImg}`}
                   alt={`${item.name}`}
                 />
