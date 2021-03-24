@@ -3,7 +3,6 @@ import Link from "next/link";
 import slugify from "slugify";
 import styles from "./Articles.module.css";
 
-const API_URL = 'https://stormy-reef-38695.herokuapp.com'
 
 function HomeArticle({ lastArticles }) {
   return (
@@ -20,7 +19,7 @@ function HomeArticle({ lastArticles }) {
                       className={`rounded ${styles.image}`}
                       width={246}
                       height={180}
-                      src={`${API_URL + item.url}`}
+                      src={item.url}
                       alt="..."
                     />
                   ))}

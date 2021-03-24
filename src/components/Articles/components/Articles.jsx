@@ -6,7 +6,6 @@ import cemnisan from "../../../assets/cemnisan.jpg";
 import { readingTime } from "../../../utilities/readingTimeCal";
 import styles from "./Articles.module.css";
 
-const API_URL = 'https://stormy-reef-38695.herokuapp.com'
 
 function Articles({ articles }) {
   return (
@@ -41,7 +40,7 @@ function Articles({ articles }) {
                   item.image.map((item, index) => (
                     <React.Fragment key={index}>
                       <img
-                        src={`${API_URL + item.url}`}
+                        src={item.url}
                         alt="..."
                       />
                     </React.Fragment>

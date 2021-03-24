@@ -1,12 +1,23 @@
+import React from 'react';
 import ReactMarkdown from "react-markdown";
-import moment from 'moment';
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
+import Link from 'next/link'
+import moment from "moment";
 import { readingTime } from "../../utilities/readingTimeCal";
 import styles from "./Detail.module.css";
 import cemnisan from "../../assets/cemnisan.jpg";
 
-const API_URL = 'https://stormy-reef-38695.herokuapp.com';
+
 
 function Detail({ article }) {
+  console.log(article)
+  const render = {
+    code: ({language,value}) =>{
+      return(
+        <SyntaxHighlighter  language={language} children={value}></SyntaxHighlighter>
+      )
+    }
+  }
   return (
     <div className={`container ${styles.container}`}>
       <div className="row">
@@ -21,9 +32,12 @@ function Detail({ article }) {
               width={28}
               height={28}
             ></img>
-            <p className={`px-2 ${styles.author}`}>Cem</p>
+            
+            <Link href="/articles">
+              <p className={`px-2 ${styles.author}`}>Cem</p>
+            </Link>
             <p className={`${styles.date}`}>
-              {moment(article.date).format('LL')}
+              {moment(article.date).format("LL")}
               <span className="px-2">·</span>
               {`${readingTime(article.content)}`}
             </p>
@@ -35,7 +49,7 @@ function Detail({ article }) {
               return (
                 <img
                   key={index}
-                  src={API_URL + item.url}
+                  src={item.url}
                   className={`img-fluid  ${styles.articleImg}`}
                   alt={`${item.name}`}
                 />
@@ -48,12 +62,11 @@ function Detail({ article }) {
         <div className={styles.markRow}>
           <div className="mt-3">
             <ReactMarkdown
+              renderers={render}
               children={article.content}
               className={styles.articleParagph}
               transformImageUri={(uri) =>
-                uri.startsWith("http")
-                  ? uri
-                  : `${API_URL}${uri}`
+                uri.startsWith("http") ? uri : `${API_URL}${uri}`
               }
             ></ReactMarkdown>
           </div>
