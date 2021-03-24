@@ -1,23 +1,23 @@
-import React from 'react';
+import React from "react";
 import ReactMarkdown from "react-markdown";
-import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
-import Link from 'next/link'
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import Link from "next/link";
 import moment from "moment";
 import { readingTime } from "../../utilities/readingTimeCal";
 import styles from "./Detail.module.css";
 import cemnisan from "../../assets/cemnisan.jpg";
 
-
-
 function Detail({ article }) {
-  console.log(article)
   const render = {
-    code: ({language,value}) =>{
-      return(
-        <SyntaxHighlighter  language={language} children={value}></SyntaxHighlighter>
-      )
-    }
-  }
+    code: ({ language, value }) => {
+      return (
+        <SyntaxHighlighter
+          language={language}
+          children={value}
+        ></SyntaxHighlighter>
+      );
+    },
+  };
   return (
     <div className={`container ${styles.container}`}>
       <div className="row">
@@ -32,7 +32,7 @@ function Detail({ article }) {
               width={28}
               height={28}
             ></img>
-            
+
             <Link href="/articles">
               <p className={`px-2 ${styles.author}`}>Cem</p>
             </Link>
@@ -43,22 +43,17 @@ function Detail({ article }) {
             </p>
           </div>
         </div>
-        {article.image.length > 0 ? (
-          <div className="mt-2 article-img text-center">
-            {article.image.map((item, index) => {
-              return (
-                <img
-                  key={index}
-                  src={item.url}
-                  className={`img-fluid  ${styles.articleImg}`}
-                  alt={`${item.name}`}
-                />
-              );
-            })}
-          </div>
-        ) : (
-          <></>
-        )}
+        <div className="mt-2 article-img text-center">
+          {article.image ? (
+            <img
+              src={article.image.url}
+              className={`img-fluid  ${styles.articleImg}`}
+              alt="..."
+            />
+          ) : (
+            <></>
+          )}
+        </div>
         <div className={styles.markRow}>
           <div className="mt-3">
             <ReactMarkdown

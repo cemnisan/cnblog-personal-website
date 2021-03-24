@@ -3,7 +3,6 @@ import Link from "next/link";
 import slugify from "slugify";
 import styles from "./Articles.module.css";
 
-
 function HomeArticle({ lastArticles }) {
   return (
     <React.Fragment>
@@ -12,19 +11,21 @@ function HomeArticle({ lastArticles }) {
           <React.Fragment key={index}>
             <div className="row lastArticles d-flex">
               <div className={`col-sm-6 col-md-6  col-lg-4 imageArticle`}>
-                {item.image &&
-                  item.image.map((item, index) => (
-                    <img
-                      key={index}
-                      className={`rounded ${styles.image}`}
-                      width={246}
-                      height={180}
-                      src={item.url}
-                      alt="..."
-                    />
-                  ))}
+                {item.image ? (
+                  <img
+                    className={`rounded ${styles.image}`}
+                    width={246}
+                    height={180}
+                    src={item.image.url}
+                    alt="..."
+                  />
+                ) : (
+                  <></>
+                )}
               </div>
-              <div className={`col-sm-12 col-md-6 col-lg-8 px-3 mt-1 ${styles.articleTitle}`}>
+              <div
+                className={`col-sm-12 col-md-6 col-lg-8 px-3 mt-1 ${styles.articleTitle}`}
+              >
                 <Link
                   href="/articles/[slug]"
                   as={`/articles/${slugify(item.title, { lower: true })}-${

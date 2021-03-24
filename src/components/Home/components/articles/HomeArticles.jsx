@@ -1,6 +1,5 @@
 import React from "react";
 import HomeArticle from "./HomeArticle";
-import styles from "./Articles.module.css";
 
 function HomeArticles({ lastArticles }) {
   return (

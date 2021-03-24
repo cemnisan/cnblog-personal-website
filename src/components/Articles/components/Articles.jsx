@@ -1,11 +1,10 @@
 import React from "react";
-import moment from 'moment'
+import moment from "moment";
 import Link from "next/link";
 import slugify from "slugify";
 import cemnisan from "../../../assets/cemnisan.jpg";
 import { readingTime } from "../../../utilities/readingTimeCal";
 import styles from "./Articles.module.css";
-
 
 function Articles({ articles }) {
   return (
@@ -36,15 +35,7 @@ function Articles({ articles }) {
                 <p className={styles.date}>{moment(item.date).format("LL")}</p>
               </div>
               <div className={styles.articlesImg} key={index}>
-                {item.image &&
-                  item.image.map((item, index) => (
-                    <React.Fragment key={index}>
-                      <img
-                        src={item.url}
-                        alt="..."
-                      />
-                    </React.Fragment>
-                  ))}
+                {item.image ? <img src={item.image.url} alt="..." /> : <></>}
               </div>
               <div className={styles.articlesContent}>
                 <p className="mt-2">{item.content}</p>
