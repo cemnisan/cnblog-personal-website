@@ -11,7 +11,7 @@ function Index({ lastArticles }) {
 }
 
 export async function getStaticProps() {
-  const res = await unfetch(`${process.env.NEXT_PUBLIC_API_URL}/posts`);
+  const res = await unfetch(`https://stormy-reef-38695.herokuapp.com/posts`);
   const lastArticles = await res.json();
   return {
     props: {
