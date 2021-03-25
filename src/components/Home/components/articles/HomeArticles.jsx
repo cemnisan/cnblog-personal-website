@@ -5,7 +5,7 @@ function HomeArticles({ lastArticles }) {
   return (
     <div className="container mt-5">
       <div className="article  d-flex justify-content-between">
-        <h5>My Last 3 Articles</h5>
+        <h5>Last Articles</h5>
       </div>
       <div className="articles mt-4">
         <HomeArticle lastArticles={lastArticles} />

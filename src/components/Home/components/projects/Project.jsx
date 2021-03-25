@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "react-query";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import styles from './Project.module.css'
+import styles from "./Project.module.css";
 import { iconsData } from "../../../../data/iconsData";
 
 function ProjectCard({ item }) {
@@ -22,10 +22,10 @@ function ProjectCard({ item }) {
                 </h6>
                 <p className="card-text text-center">{data.description}</p>
                 <div className="iconGit text-center">
-                  <a 
-                  href={data.clone_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  <a
+                    href={data.clone_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <FontAwesomeIcon
                       color={"black"}

@@ -45,29 +45,27 @@ function Detail({ article }) {
           </div>
         </div>
         <div className="mt-2 article-img text-center">
-          
-            {article.image ? (
-              <figure>
+          {article.image ? (
+            <figure>
               <img
                 src={article.image.url}
                 className={`img-fluid  ${styles.articleImg}`}
                 alt={article.image.caption}
               />
-              <figcaption>{article.image.caption}</figcaption>
-              </figure>
-            ) : (
-              <></>
-            )}
+              <figcaption className={styles.caption}>
+                {article.image.caption}
+              </figcaption>
+            </figure>
+          ) : (
+            <></>
+          )}
         </div>
         <div className={styles.markRow}>
           <div className="mt-3">
             <ReactMarkdown
               renderers={render}
               children={article.content}
-              className={styles.articleParagph}
-              transformImageUri={(uri) =>
-                uri.startsWith("http") ? uri : `${API_URL}${uri}`
-              }
+              className={styles.articleMarkDown}
             ></ReactMarkdown>
           </div>
         </div>

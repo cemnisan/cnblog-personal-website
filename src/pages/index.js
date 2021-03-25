@@ -12,7 +12,10 @@ function Index({ lastArticles }) {
           name="description"
           content="CNBlog; Yazılım üzerine yazılan kişisel makalelerin paylaşıldığı bir websitesidir."
         ></meta>
-        <meta property="og:title" content="CNBlog | Yazılım Üzerine Makaleler"></meta>
+        <meta
+          property="og:title"
+          content="CNBlog | Yazılım Üzerine Makaleler"
+        ></meta>
         <meta
           property="og:description"
           content="CNBlog; Yazılım üzerine yazılan kişisel makalelerin paylaşıldığı bir websitesidir."

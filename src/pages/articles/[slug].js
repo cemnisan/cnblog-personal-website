@@ -57,14 +57,13 @@ function ArticleDetail({ article }) {
           content={`${article.content.slice(0, 100)}...`}
         ></meta>
         <meta name="twitter:image" content={article.image.url}></meta>
-        
+
         <link
           rel="canonical"
           href={`cnblog.com/articles/${slugify(article.title, {
             lower: true,
           })}`}
         ></link>
-
       </Head>
       <Detail article={article} />
     </Layout>
@@ -86,9 +85,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const id = params.slug.split("-").slice(-1)[0];
-  const data = await unfecth(
-    `${process.env.NEXT_PUBLIC_API_URL}/posts/` + id
-  );
+  const data = await unfecth(`${process.env.NEXT_PUBLIC_API_URL}/posts/` + id);
   const article = await data.json();
   return {
     props: {

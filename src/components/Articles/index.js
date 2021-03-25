@@ -1,4 +1,4 @@
-import Articles from './components/Articles';
-import Article from './components/Article';
+import Articles from "./components/Articles";
+import Article from "./components/Article";
 
-export {Article,Articles};
+export { Article, Articles };

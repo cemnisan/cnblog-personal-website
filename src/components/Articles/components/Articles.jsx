@@ -35,7 +35,11 @@ function Articles({ articles }) {
                 <p className={styles.date}>{moment(item.date).format("LL")}</p>
               </div>
               <div className={styles.articlesImg} key={index}>
-                {item.image ? <img src={item.image.url} alt={item.image.caption} /> : <></>}
+                {item.image ? (
+                  <img src={item.image.url} alt={item.image.caption} />
+                ) : (
+                  <></>
+                )}
               </div>
               <div className={styles.articlesContent}>
                 <p className="mt-2">{item.content}</p>
