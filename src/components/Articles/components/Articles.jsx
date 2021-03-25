@@ -1,4 +1,5 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 import moment from "moment";
 import Link from "next/link";
 import slugify from "slugify";
@@ -41,8 +42,11 @@ function Articles({ articles }) {
                   <></>
                 )}
               </div>
-              <div className={styles.articlesContent}>
-                <p className="mt-2">{item.content}</p>
+              <div className="">
+                <ReactMarkdown
+                  className={styles.articlesContent}
+                  children={item.content}
+                ></ReactMarkdown>
               </div>
               <div className="readMore d-flex justify-content-start mb-4">
                 <Link

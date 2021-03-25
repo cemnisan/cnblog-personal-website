@@ -21,10 +21,10 @@ function Detail({ article }) {
   return (
     <div className={`container ${styles.container}`}>
       <div className="row">
-        <div className="title">
-          <h1 className="mt-5">{article.title}</h1>
-        </div>
         <div className={` ${styles.row}`}>
+          <div className="title">
+            <h1 className="mt-5">{article.title}</h1>
+          </div>
           <div className="d-flex  mt-3">
             <img
               className="rounded-circle"

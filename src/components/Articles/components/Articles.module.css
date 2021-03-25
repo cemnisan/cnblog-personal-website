@@ -20,12 +20,12 @@
   padding-left: 8px;
 }
 
-.articlesContent p{
+.articlesContent {
   font-size: 16px;
   max-width: 600px;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 4; /* kaç satırla sınırlayacağımızı yazıyoruz */
+  -webkit-line-clamp: 5; /* kaç satırla sınırlayacağımızı yazıyoruz */
   -webkit-box-orient: vertical;
 }
 
