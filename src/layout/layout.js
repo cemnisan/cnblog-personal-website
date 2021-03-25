@@ -7,6 +7,7 @@ function Layout({ children }) {
   return (
     <>
       <Head>
+        {/* General */}
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chorme=1"></meta>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta

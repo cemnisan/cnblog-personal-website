@@ -8,7 +8,6 @@ import styles from "./Detail.module.css";
 import cemnisan from "../../assets/cemnisan.jpg";
 
 function Detail({ article }) {
-  console.log(article)
   const render = {
     code: ({ language, value }) => {
       return (
