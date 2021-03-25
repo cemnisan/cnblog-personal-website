@@ -17,7 +17,7 @@ function HomeArticle({ lastArticles }) {
                     width={246}
                     height={180}
                     src={item.image.url}
-                    alt="..."
+                    alt={item.image.caption}
                   />
                 ) : (
                   <></>

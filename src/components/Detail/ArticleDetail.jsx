@@ -8,6 +8,7 @@ import styles from "./Detail.module.css";
 import cemnisan from "../../assets/cemnisan.jpg";
 
 function Detail({ article }) {
+  console.log(article)
   const render = {
     code: ({ language, value }) => {
       return (
@@ -29,6 +30,7 @@ function Detail({ article }) {
             <img
               className="rounded-circle"
               src={cemnisan}
+              alt="Cem Nisan"
               width={28}
               height={28}
             ></img>
@@ -44,15 +46,19 @@ function Detail({ article }) {
           </div>
         </div>
         <div className="mt-2 article-img text-center">
-          {article.image ? (
-            <img
-              src={article.image.url}
-              className={`img-fluid  ${styles.articleImg}`}
-              alt="..."
-            />
-          ) : (
-            <></>
-          )}
+          
+            {article.image ? (
+              <figure>
+              <img
+                src={article.image.url}
+                className={`img-fluid  ${styles.articleImg}`}
+                alt={article.image.caption}
+              />
+              <figcaption>{article.image.caption}</figcaption>
+              </figure>
+            ) : (
+              <></>
+            )}
         </div>
         <div className={styles.markRow}>
           <div className="mt-3">

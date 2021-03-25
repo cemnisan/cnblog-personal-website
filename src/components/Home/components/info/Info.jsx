@@ -26,7 +26,7 @@ function Info() {
           </div>
           <div className="col-sm-12 order-first order-sm-1 order-md-1 order-lg-12 col-md-12 col-lg-5 mb-4 px-5">
             <div className={styles.homeImg}>
-              <img src={cemnisan} alt="..." />
+              <img src={cemnisan} alt="Cem Nisan" />
             </div>
           </div>
         </div>

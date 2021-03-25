@@ -16,7 +16,7 @@ function HomeSkills() {
               height={"40"}
               className="rounded-lg skills"
               src={item.svg}
-              alt="..."
+              alt={item.language}
             />
             <h5 className="px-2 my-3">{item.language}</h5>
           </div>

@@ -1,10 +1,24 @@
+import unfetch from "isomorphic-fetch";
+import Head from "next/head";
 import Layout from "../layout/layout";
 import { Home } from "../components/Home";
-import unfetch from "isomorphic-fetch";
 
 function Index({ lastArticles }) {
   return (
     <Layout>
+      <Head>
+        <title>CNBlog | Yazılım Üzerine Makaleler</title>
+        <meta
+          name="description"
+          content="CNBlog; Yazılım üzerine yazılan kişisel makalelerin paylaşıldığı bir websitesidir."
+        ></meta>
+        <meta property="og:title" content="CNBlog | Yazılım Üzerine Makaleler"></meta>
+        <meta
+          property="og:description"
+          content="CNBlog; Yazılım üzerine yazılan kişisel makalelerin paylaşıldığı bir websitesidir."
+        ></meta>
+        <link rel="canonical" href="https://cnblog.com"></link>
+      </Head>
       <Home lastArticles={lastArticles} />
     </Layout>
   );
