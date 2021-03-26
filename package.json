@@ -32,5 +32,8 @@
     "react-transition-group": "^4.4.1",
     "slugify": "^1.4.7",
     "unfetch": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/gtag.js": "0.0.4"
   }
 }
