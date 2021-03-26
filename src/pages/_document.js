@@ -21,19 +21,16 @@ class MyDocument extends Document {
             }}
           />
           {/* End Google Tag Manager */}
-          {/* Google Tag Manager (noscript) */}
-          <noscript
-            dangerouslySetInnerHTML={{
-              __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWTRT23" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-            }}
-          />
 
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
           />
-          <script async src="https://www.google-analytics.com/analytics.js"></script>
+          <script
+            async
+            src="https://www.google-analytics.com/analytics.js"
+          ></script>
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -46,6 +43,12 @@ class MyDocument extends Document {
           />
         </Head>
         <body>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TWTRT23"
+            height="0"
+            width="0"
+            style={{display:"none",visibility:"hidden"}}
+          ></iframe>
           <Main />
           <NextScript />
         </body>
