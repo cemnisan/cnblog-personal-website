@@ -24,7 +24,7 @@ class MyDocument extends Document {
           {/* Google Tag Manager (noscript) */}
           <noscript
             dangerouslySetInnerHTML={{
-              __html: <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWTRT23" height="0" width="0" style="display:none;visibility:hidden"></iframe>,
+              __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWTRT23" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
             }}
           />
 
@@ -33,6 +33,7 @@ class MyDocument extends Document {
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
           />
+          <script async src="https://www.google-analytics.com/analytics.js"></script>
           <script
             dangerouslySetInnerHTML={{
               __html: `
