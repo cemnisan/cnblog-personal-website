@@ -1,1 +1,49 @@
-personal
+# Personal Web Site
+
+## Technologies
+- React / Next 
+- Strapi (graphQL for image)
+- MongoDB with Strapi
+    ## Libraries
+    - Bootstrap
+    - MomentJS
+    - EmailJS
+    - Slugify
+    - Unfetch
+    - React MarkDown
+
+## Features
+
+- You can introduce youself,
+- Where you can write your articles,
+- A Personal Article Page
+
+## Installation
+
+
+-React
+```sh
+    git clone https://github.com/cemnisan/cnblog-personal-website.git
+```
+.env.example:
+```sh
+    NEXT_PUBLIC_API_URL = 'YOUR STRAPI LINK'
+```
+Install dependencies
+```sh
+    yarn
+```
+Start the Server
+```sh
+    yarn dev
+```
+## v2.2 Final
+
+### v3 To Do List
+- [ ] Anonim Comment
+- [ ] Article Like Buttons
+
+Thank you.
+
+
+
