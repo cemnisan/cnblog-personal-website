@@ -13,7 +13,7 @@ function Layout({ children }) {
         <meta
           httpEquiv="Content-Type"
           content="text/html"
-          charset="UTF8"
+          charSet="UTF8"
         ></meta>
         <meta name="content-language" content="tr"></meta>
         <meta
