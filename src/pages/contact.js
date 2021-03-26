@@ -16,7 +16,7 @@ function MainContact() {
           property="og:description"
           content="CNBlog iletişim sayfasından bizimle kolay bir şekilde iletişime geçebilirsiniz."
         ></meta>
-        <link rel="canonical" href="https://cnblog.com/contact"></link>
+        <link rel="canonical" href="https://cnblog.vercel.app/contact"></link>
       </Head>
       <Contact />
     </Layout>

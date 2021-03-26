@@ -21,35 +21,35 @@ function ArticleDetail({ article }) {
         <meta name="keywords" content={article.hasthag}></meta>
 
         {/* Facebook */}
-        <meta property="og:type" content="website"></meta>
         <meta property="og:title" content={article.title}></meta>
+        <meta property="og:image" content={article.image.url}></meta>
         <meta
           property="og:description"
           content={`${article.content.slice(0, 160)}...`}
         ></meta>
-        <meta property="og:image" content={article.image.url}></meta>
         <meta
           property="og:url"
-          content={`cnblog.com/articles/${slugify(article.title, {
+          content={`https://cnblog.vercel.app/articles/${slugify(article.title, {
             lower: true,
-          })}`}
+          })}-${article.id}`}
         ></meta>
+        <meta property="og:type" content="website"></meta>
         <meta property="og:site_name" content="CNBlog"></meta>
 
         {/* Twitter  */}
         <meta name="twitter:card" content="summary"></meta>
         <meta
           name="twitter:site"
-          content={`cnblog.com/articles/${slugify(article.title, {
+          content={`cnblog.vercel.app/articles/${slugify(article.title, {
             lower: true,
-          })}`}
+          })}-${article.id}`}
         ></meta>
         <meta name="twitter:creator" content="Cem Nisan"></meta>
         <meta
           property="twitter:url"
-          content={`cnblog.com/articles/${slugify(article.title, {
+          content={`cnblog.vercel.app/articles/${slugify(article.title, {
             lower: true,
-          })}`}
+          })}-${article.id}`}
         ></meta>
         <meta name="twitter:title" content={article.title}></meta>
         <meta
@@ -60,9 +60,9 @@ function ArticleDetail({ article }) {
 
         <link
           rel="canonical"
-          href={`cnblog.com/articles/${slugify(article.title, {
+          href={`cnblog.vercel.app/articles/${slugify(article.title, {
             lower: true,
-          })}`}
+          })}-${article.id}`}
         ></link>
       </Head>
       <Detail article={article} />

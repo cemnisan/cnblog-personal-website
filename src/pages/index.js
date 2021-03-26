@@ -20,7 +20,7 @@ function Index({ lastArticles }) {
           property="og:description"
           content="CNBlog; Yazılım üzerine yazılan kişisel makalelerin paylaşıldığı bir websitesidir."
         ></meta>
-        <link rel="canonical" href="https://cnblog.com"></link>
+        <link rel="canonical" href="https://cnblog.vercel.app"></link>
       </Head>
       <Home lastArticles={lastArticles} />
     </Layout>

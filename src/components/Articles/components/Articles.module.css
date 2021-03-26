@@ -23,10 +23,12 @@
 .articlesContent {
   font-size: 16px;
   max-width: 600px;
+  display: block;/* or inline-block */
+  text-overflow: ellipsis;
+  word-wrap: break-word;
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 5; /* kaç satırla sınırlayacağımızı yazıyoruz */
-  -webkit-box-orient: vertical;
+  max-height:8em;
+  line-height: 1em;
 }
 
 .articlesImg img {

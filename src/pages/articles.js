@@ -28,7 +28,7 @@ function Articles({ articles }) {
           content="CNBlog makaleler kısmını inceleyerek, yazılım üzerine yazılmış bazı kişisel makaleleri okuyup, bilgiler edinebilirsiniz."
         ></meta>
 
-        <link rel="canonical" href="https://cnblog.com/articles"></link>
+        <link rel="canonical" href="https://cnblog.vercel.app/articles"></link>
       </Head>
       <Article articles={articles} />
     </Layout>

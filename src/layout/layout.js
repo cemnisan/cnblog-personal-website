@@ -21,6 +21,9 @@ function Layout({ children }) {
           content="9q3PSxnr-Wfw5_hBUIU2ZxJ-om-xosVZ6zFnZ91OQjk"
         />
         <meta name="robots" content="index,follow"></meta>
+        <script>
+          
+        </script>
       </Head>
       <Navbar />
       <main>{children}</main>

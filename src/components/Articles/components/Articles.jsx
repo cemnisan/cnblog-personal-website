@@ -42,20 +42,21 @@ function Articles({ articles }) {
                   <></>
                 )}
               </div>
-              <div className="">
+              <div className="content mt-2">
                 <ReactMarkdown
                   className={styles.articlesContent}
-                  children={item.content}
+                  children={`${item.content}`}
                 ></ReactMarkdown>
+                <p>...</p>
               </div>
-              <div className="readMore d-flex justify-content-start mb-4">
+              <div className="readMore d-flex justify-content-start">
                 <Link
                   href="/articles/[slug]"
                   as={`/articles/${slugify(item.title, { lower: true })}-${
                     item.id
                   }`}
                 >
-                  <h6 className={`mt-2 ${styles.detail}`}>
+                  <h6 className={` ${styles.detail}`}>
                     Read More<span className="px-2">·</span>
                     {`${readingTime(item.content)}`}
                   </h6>
