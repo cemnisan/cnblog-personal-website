@@ -13,18 +13,21 @@
 }
 
 .articleMarkDown h3{
+    margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
 .articleMarkDown h4{
+    margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
 .articleMarkDown h2{
+    margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
 
 .articleMarkDown img{
     width: 100%;
-    max-width: 600px;
+    max-width: 550px;
     height: auto;
     margin-bottom: 0.3em;
 }
@@ -47,14 +50,10 @@
         margin: auto;
         width: 400px;
     }
-    .articleMarkDown img{
+   
+    .articleMarkDown {
         width: 100%;
-        max-width: 470px;
-        height: auto;
-    }
-    .articleMarkDown p{
-        width: 100%;
-        max-width: 470px;
+        max-width: 400px;
         height: auto;
     }
     .articleImg{
@@ -69,11 +68,33 @@
         margin: auto;
         width: 350px;
     }
+    .articleMarkDown {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 376px){
     .container{
         margin: auto;
         width: 300px;
+    }
+    .articleMarkDown {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:280px){
+    .container{
+        margin: auto;
+        width: 250px;
+    }
+    .articleMarkDown {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
     }
 }

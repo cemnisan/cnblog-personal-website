@@ -9,11 +9,13 @@
   margin-bottom: 1em;
 }
 
-.articleTitle p {
+.content {
+  display: block; /* or inline-block */
+  text-overflow: ellipsis;
+  word-wrap: break-word;
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 5; /* kaç satırla sınırlayacağımızı yazıyoruz */
-  -webkit-box-orient: vertical;
+  max-height: 6em;
+  line-height: 1em;
 }
 
 .articleDate {
@@ -33,24 +35,22 @@
   cursor: pointer;
 }
 
-
 @media screen and (max-width: 376px) {
   .image {
     width: 350px;
     height: 200px;
   }
-  .articleTitle h3{
+  .articleTitle h3 {
     font-size: 22.7px;
-  
   }
 }
 
-@media screen and (max-width:414px) and (min-width:377px){
-  .image{
+@media screen and (max-width: 414px) and (min-width: 377px) {
+  .image {
     width: 380px;
     height: 230px;
   }
-  .articleTitle h3{
+  .articleTitle h3 {
     font-size: 25px;
   }
 }
@@ -62,15 +62,12 @@
   }
 }
 
-
 @media screen and (max-width: 991px) and (min-width: 701px) {
   .image {
     width: 330px;
     height: 200px;
   }
-  .articleTitle p {
-    -webkit-line-clamp: 3; /* kaç satırla sınırlayacağımızı yazıyoruz */
-  }
+  
 }
 
 @media screen and (max-width: 1199px) and (min-width: 992px) {

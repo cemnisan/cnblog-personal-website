@@ -27,7 +27,7 @@
   text-overflow: ellipsis;
   word-wrap: break-word;
   overflow: hidden;
-  max-height:8em;
+  max-height:6em;
   line-height: 1em;
 }
 
@@ -61,7 +61,7 @@
   }
   .container {
     margin: auto;
-    width: 400px;
+    width: 475px;
   }
 }
 
@@ -109,7 +109,7 @@
   }
   .articlesContent  {
     width: 100%;
-    max-width: 350px;
+    max-width: 340px;
     height: auto;
   }
 }
@@ -134,9 +134,19 @@
   }
 }
 
-@media screen and (max-width: 318px) {
+@media screen and (max-width: 320px) {
   .container {
     margin: auto;
     width: 270px;
+  }
+  .articlesImg img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+  }
+  .articlesContent  {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
   }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 import Link from "next/link";
 import slugify from "slugify";
 import styles from "./Articles.module.css";
@@ -42,10 +43,14 @@ function HomeArticle({ lastArticles }) {
                     <span>{item.hasthag.replace("#", "").slice(0, 4)}</span>
                   </p>
                 </div>
-                <p className={styles.content}>{item.content}</p>
+                <ReactMarkdown
+                  children={item.content}
+                  className={styles.content}
+                ></ReactMarkdown>
+                <p>...</p>
               </div>
             </div>
-            <div className={`d-flex justify-content-end ${styles.moreArticle}`}>
+            <div className={`d-flex justify-content-end ${styles.moreArticle} mt-3`}>
               <Link
                 className={`${styles.articleMore}`}
                 href={`/articles/${slugify(item.title, { lower: true })}-${
