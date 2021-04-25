@@ -1,6 +1,7 @@
 import "../styles/global.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {useEffect} from 'react';
+import React,{useEffect} from 'react';
+import {Auth0Provider} from "@auth0/auth0-react";
 import {useRouter} from 'next/router';
 import * as gtag from '../utilities/gtag';
 import { config, library } from "@fortawesome/fontawesome-svg-core";
@@ -23,5 +24,13 @@ export default function App({ Component, pageProps }) {
       router.events.off('routerChangeComplete',handleRouterChange)
     }
   },[router.events])
-  return <Component {...pageProps} />;
+  return (
+      <Auth0Provider
+          domain={`${process.env.NEXT_PUBLIC_AUTH0_DOMAIN}`}
+          clientId={`${process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID}`}
+          redirectUri={`${process.env.NEXT_PUBLIC_AUTH0_URL}`}
+      >
+        <Component {...pageProps} />
+      </Auth0Provider>
+  );
 }

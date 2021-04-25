@@ -12,6 +12,7 @@
     color:rgba(117, 117, 117, 1);
 }
 
+
 .articleMarkDown h3{
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -45,6 +46,13 @@
     
 }
 
+.textArea{
+    width: 38em;
+    height: 10em;
+    min-height: 6em;
+    max-height: 10em;
+}
+
 @media screen and (max-width: 677px) and (min-width: 130px){
     .container{
         margin: auto;
@@ -61,6 +69,11 @@
         max-width: 470px;
         height: auto;
     }
+    .textArea{
+        width: 24em;
+        height: auto;
+    }
+
 }
 
 @media screen and (max-width: 422px){

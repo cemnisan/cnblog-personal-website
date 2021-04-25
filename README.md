@@ -4,9 +4,11 @@
 - React / Next 
 - Strapi (graphQL for image)
 - MongoDB with Strapi
+- Uptash(Redis) for Comment
+- Auth0 for User Authenticate
     ## Libraries
     - Bootstrap
-    - MomentJS
+    - MomentJS,Luxon
     - EmailJS
     - Slugify
     - Unfetch
@@ -40,7 +42,7 @@ Start the Server
 ## v2.2 Final
 
 ### v3 To Do List
-- [ ] Anonim Comment
+-  [x] Comment
 - [ ] Article Like Buttons
 
 Thank you.

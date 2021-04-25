@@ -1,8 +1,9 @@
 import React from "react";
+import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import Link from "next/link";
 import moment from "moment";
+import CommentForm from "./CommentForm";
 import { readingTime } from "../../utilities/readingTimeCal";
 import styles from "./Detail.module.css";
 import cemnisan from "../../assets/cemnisan.jpg";
@@ -19,6 +20,7 @@ function Detail({ article }) {
     },
   };
   return (
+
     <div className={`container ${styles.container}`}>
       <div className="row">
         <div className={` ${styles.row}`}>
@@ -69,6 +71,7 @@ function Detail({ article }) {
             ></ReactMarkdown>
           </div>
         </div>
+        <CommentForm/>
       </div>
     </div>
   );
