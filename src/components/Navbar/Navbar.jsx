@@ -9,7 +9,7 @@ function Navbar() {
       <Container className="mt-2">
         <NavBar bg="white" expand="lg">
           <NavBar.Brand className="navbar-brand" href="/">
-            CNBlog <span className={styles.vol}>v2.2</span>
+            CNBlog <span className={styles.vol}>v3</span>
           </NavBar.Brand>
           <NavBar.Toggle aria-controls="basic-navbar-nav" />
           <NavBar.Collapse  id="basic-navbar-nav">

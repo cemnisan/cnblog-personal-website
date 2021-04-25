@@ -4,9 +4,9 @@ import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import moment from "moment";
 import CommentForm from "./CommentForm";
-import { readingTime } from "../../utilities/readingTimeCal";
+import { readingTime } from "../../../utilities/readingTimeCal";
 import styles from "./Detail.module.css";
-import cemnisan from "../../assets/cemnisan.jpg";
+import cemnisan from "../../../assets/cemnisan.jpg";
 
 function Detail({ article }) {
   const render = {

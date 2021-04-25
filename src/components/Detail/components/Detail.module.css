@@ -53,6 +53,10 @@
     max-height: 10em;
 }
 
+.line{
+    width: 600px;
+}
+
 @media screen and (max-width: 677px) and (min-width: 130px){
     .container{
         margin: auto;
@@ -72,6 +76,9 @@
     .textArea{
         width: 24em;
         height: auto;
+    }
+    .line{
+        width: 400px;
     }
 
 }
