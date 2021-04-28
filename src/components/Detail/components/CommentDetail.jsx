@@ -13,7 +13,7 @@ function CommentDetail({ comment }) {
             .sort((a, b) => a.createdAt - b.createdAt)
             .map((item, index) => (
               <React.Fragment key={index}>
-                <div className={"user  d-flex"}>
+                <div className={"user"}>
                   <img
                     className={"rounded-circle"}
                     width={40}

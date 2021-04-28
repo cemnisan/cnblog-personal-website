@@ -5,7 +5,7 @@
             "for":"name",
             "type":"text",
             "idForm":"name",
-            "placeHolder":"Name",
+            "placeHolder":"İsim",
             "name":"user_name"
         },
         {
@@ -13,7 +13,7 @@
             "for":"lastName",
             "type":"text",
             "idForm":"lastName",
-            "placeHolder":"Last Name",
+            "placeHolder":"Soy İsmi",
             "name":"user_lastName"
         },
         {
@@ -21,7 +21,7 @@
             "for":"email",
             "type":"email",
             "idForm":"email",
-            "placeHolder":"Email",
+            "placeHolder":"E-mail",
             "name":"user_email"
         },
         {
@@ -29,7 +29,7 @@
             "for":"city",
             "type":"text",
             "idForm":"city",
-            "placeHolder":"City",
+            "placeHolder":"Şehir",
             "name":"user_city"
         },
         {
@@ -37,7 +37,7 @@
             "for":"message",
             "type":"text-area",
             "idForm":"message",
-            "placeHolder":"Message",
+            "placeHolder":"Mesaj",
             "name":"message"
         }
     ]

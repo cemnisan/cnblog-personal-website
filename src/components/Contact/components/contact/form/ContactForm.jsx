@@ -35,13 +35,14 @@ function ContactForm({ onChange }) {
                   className={`mb-3 ${styles.formLabel}`}
                   htmlFor={item.for}
                 >
-                  Message
+                  Mesaj
                 </label>
                 <textarea
                   className="form-control"
                   onChange={onChange}
                   name={item.name}
                   id={item.idForm}
+                  placeholder={item.placeHolder}
                   rows="5"
                 ></textarea>
               </div>
