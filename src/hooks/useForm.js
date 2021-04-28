@@ -52,10 +52,10 @@ export default () => {
       } else {
         emailjs
           .sendForm(
-            "service_6md8sco",
-            "template_lkc39me",
+            `${process.env.NEXT_PUBLIC_EMAIL_SERVICE}`,
+            `${process.env.NEXT_PUBLIC_EMAIL_TEMPLATE}`,
             e.target,
-            "user_bm3DhejnzHNMsgiZuI9kR"
+            `${process.env.NEXT_PUBLIC_EMAIL_USER}`
           )
           .then(
             () => {
