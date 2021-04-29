@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import emailjs, { send } from "emailjs-com";
-import { validEmail, nameAndLastName, validCity } from "../utilities/regex";
+import { validEmail, validOtherInput } from "../utilities/regex";
 
 export default () => {
   const router = useRouter();
-  
+
   const [contact, setContact] = useState({
     user_name: "",
     user_lastName: "",
@@ -21,9 +21,9 @@ export default () => {
 
   const validate = () => {
     if (!validEmail.test(contact.user_email)) setEmailErr(true);
-    if (!nameAndLastName.test(contact.user_name)) setNameErr(true);
-    if (!nameAndLastName.test(contact.user_lastName)) setLastNameErr(true);
-    if (!validCity.test(contact.user_city)) setCityErr(true);
+    if (!validOtherInput.test(contact.user_name)) setNameErr(true);
+    if (!validOtherInput.test(contact.user_lastName)) setLastNameErr(true);
+    if (!validOtherInput.test(contact.user_city)) setCityErr(true);
   };
 
   const onChange = (e) => {
@@ -34,17 +34,17 @@ export default () => {
     e.preventDefault();
 
     if (emailErr || nameErr || lastNameErr || cityErr) {
-      setTimeout(() =>{
-        router.reload(window.location.pathname)
-      },1500)
-
+      setTimeout(() => {
+        router.reload(window.location.pathname);
+      }, 1700);
+      
     } else {
       emailjs
         .sendForm(
-          "service_6md8sco",
-          "template_lkc39me",
+          `${process.env.NEXT_PUBLIC_EMAIL_SERVICE}`,
+          `${process.env.NEXT_PUBLIC_EMAIL_TEMPLATE}`,
           e.target,
-          "user_bm3DhejnzHNMsgiZuI9kR"
+          `${process.env.NEXT_PUBLIC_EMAIL_USER}`
         )
         .then(
           () => {
@@ -59,7 +59,7 @@ export default () => {
         );
     }
   };
-  console.log(emailErr, nameErr, lastNameErr, cityErr);
+
   return [
     onChange,
     sendEmail,
