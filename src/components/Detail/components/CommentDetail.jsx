@@ -23,7 +23,7 @@ function CommentDetail({ comment }) {
                   <span>dedi ki:</span>
                 </div>
                 <div className={`${styles.comment}`}>
-                  <p className={"mx-1"}>
+                  <p>
                     {item.text}
                     <span className={`mx-2 ${styles.date}`}>
                       {DateTime.fromMillis(item.createdAt).toRelative()}

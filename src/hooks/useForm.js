@@ -5,6 +5,7 @@ import { validEmail, nameAndLastName, validCity } from "../utilities/regex";
 
 export default () => {
   const router = useRouter();
+  
   const [contact, setContact] = useState({
     user_name: "",
     user_lastName: "",
@@ -12,6 +13,7 @@ export default () => {
     user_email: "",
     message: "",
   });
+
   const [emailErr, setEmailErr] = useState(false);
   const [nameErr, setNameErr] = useState(false);
   const [lastNameErr, setLastNameErr] = useState(false);
@@ -31,47 +33,40 @@ export default () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    if (
-      contact.user_name &&
-      contact.user_lastName &&
-      contact.user_email &&
-      contact.user_city &&
-      contact.message
-    ) {
-      if (emailErr) {
-        alert("Yazdığınız E-mail adresi geçersiz.");
-      }
-      if (nameErr) {
-        alert("Yazdığınız İsim geçersiz.");
-      }
-      if (lastNameErr) {
-        alert("Yazdığınız Soy İsmi geçersiz.");
-      }
-      if (cityErr) {
-        alert("Yazdığınız Şehir İsmi geçersiz.");
-      } else {
-        emailjs
-          .sendForm(
-            `${process.env.NEXT_PUBLIC_EMAIL_SERVICE}`,
-            `${process.env.NEXT_PUBLIC_EMAIL_TEMPLATE}`,
-            e.target,
-            `${process.env.NEXT_PUBLIC_EMAIL_USER}`
-          )
-          .then(
-            () => {
-              alert(
-                "Mesajınız başarıyla gönderildi, size en kısa zamanda dönüş yapacağım! ^_^ "
-              );
-              router.push("/");
-            },
-            (err) => {
-              alert("Hmm, bir şeyler ters gitti!", err);
-            }
-          );
-      }
-    }else{
-        alert("Lütfen gerekli alanları doldurunuz.")
+    if (emailErr || nameErr || lastNameErr || cityErr) {
+      setTimeout(() =>{
+        router.reload(window.location.pathname)
+      },1500)
+
+    } else {
+      emailjs
+        .sendForm(
+          "service_6md8sco",
+          "template_lkc39me",
+          e.target,
+          "user_bm3DhejnzHNMsgiZuI9kR"
+        )
+        .then(
+          () => {
+            alert(
+              "Mesajınız başarıyla gönderildi, size en kısa zamanda dönüş yapacağım! ^_^ "
+            );
+            router.push("/");
+          },
+          (err) => {
+            alert("Hmm, bir şeyler ters gitti!", err);
+          }
+        );
     }
   };
-  return [onChange, sendEmail, validate];
+  console.log(emailErr, nameErr, lastNameErr, cityErr);
+  return [
+    onChange,
+    sendEmail,
+    validate,
+    emailErr,
+    nameErr,
+    lastNameErr,
+    cityErr,
+  ];
 };
