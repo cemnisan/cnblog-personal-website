@@ -13,16 +13,17 @@ function CommentDetail({ comment }) {
             .sort((a, b) => a.createdAt - b.createdAt)
             .map((item, index) => (
               <React.Fragment key={index}>
-                <div className={"user"}>
+                <div className={"user mt-4"}>
                   <img
                     className={"rounded-circle"}
                     width={40}
                     src={item.user.picture}
                   />
-                  <span className={"mx-2 my-2"}>{item.user.name}</span>
+                  <span className={`mx-2 my-2 ${styles.commentUser}`}>{item.user.name}</span>
+                  <span>dedi ki:</span>
                 </div>
-                <div className={"comment"}>
-                  <p className={"mt-2 mx-1"}>
+                <div className={`${styles.comment}`}>
+                  <p className={"mx-1"}>
                     {item.text}
                     <span className={`mx-2 ${styles.date}`}>
                       {DateTime.fromMillis(item.createdAt).toRelative()}

@@ -12,7 +12,7 @@ function CommentForm() {
     <React.Fragment>
       <CommentDetail comment={comment}/>
       <form onSubmit={handleSubmit}>
-        <div className={"mt-2"}>
+        <div className={"mt-4"}>
           <textarea
             value={text}
             onChange={(e) => setText(e.target.value)}

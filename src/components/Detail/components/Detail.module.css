@@ -36,7 +36,6 @@
 .caption{
     color:rgba(117, 117, 117, 1);
     font-size: 16px;
-    font-family: 'adobe-clean, sans-serif, arial';
     margin-top: 3px;
 }
 
@@ -55,6 +54,18 @@
 
 .line{
     width: 600px;
+}
+
+.comment{
+    background-color: #f5f5f5;
+    margin-left: 58px;
+    padding: 11px 18px 4px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.commentUser{
+    font-weight: bold;
 }
 
 @media screen and (max-width: 677px) and (min-width: 130px){
