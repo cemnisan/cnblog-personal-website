@@ -1,10 +1,12 @@
 import React from "react";
+import Head from "next/head";
+import dynamic from 'next/dynamic';
 import moment from "moment";
 import slugify from "slugify";
 import unfecth from "isomorphic-fetch";
-import Head from "next/head";
 import Layout from "../../layout/layout";
-import {Detail} from "../../components/Detail/";
+
+const Detail = dynamic(()=>import('../../components/Detail/components/ArticleDetail'));
 
 function ArticleDetail({ article }) {
   //Sitemap Oluşturmayı öğren.

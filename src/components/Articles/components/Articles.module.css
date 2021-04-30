@@ -14,8 +14,6 @@
 
 .date{
   color: #6c757d;
-  font-size: 15px;
-  padding-top: 2px;
   padding-left: 8px;
 }
 
@@ -30,122 +28,24 @@
   line-height: 1em;
 }
 
-.articlesImg img {
-  width: 100%;
-  max-width: 585px;
-  height: auto;
-  margin-bottom: 0.3em;
-}
-
 .detail {
   color: rgba(26, 137, 23, 1);
   cursor: pointer;
 }
 
-@media screen and (max-width: 677px) and (min-width: 130px) {
-  .articlesImg img {
-    width: 100%;
-    max-width: 450px;
-    height: auto;
-  }
-  .articlesContent p {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-  }
-  .headerTitle {
-    width: 100%;
-    max-width: 470px;
-    height: auto;
-  }
-  .container {
-    margin: auto;
-    width: 475px;
-  }
-}
-
-@media screen and (max-width: 486px) and (min-width: 458px) {
-  .articlesImg img {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-  }
-  .articlesContent  {
-    width: 100%;
-    max-width: 340px;
-    height: auto;
-  }
-  .headerTitle {
-    width: 100%;
-    max-width: 340px;
-    height: auto;
-  }
-  .articleTitle{
-    width: 100%;
-    max-width: 340px;
-    height: auto;
-  }
-  .container {
-    margin: auto;
-    width: 400px;
-  }
-}
-
-@media screen and (max-width: 459px) {
+@media screen and (max-width: 768px){
   .container {
     margin: auto;
     width: 350px;
   }
-
-  .articleTitle h2{
-    font-size: 22px;
-  }
-
-  .articlesImg img {
+  .articlesContent p {
     width: 100%;
-    max-width: 350px;
+    max-width: 480px;
     height: auto;
   }
-  .articlesContent  {
-    width: 100%;
-    max-width: 340px;
-    height: auto;
+  .articlesDetail{
+    margin:auto;
+    width: 340px;
   }
 }
 
-@media screen and (max-width: 394px) {
-  .container {
-    margin: auto;
-    width: 300px;
-  }
-  .articlesImg img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-  }
-  .articlesContent  {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-  }
-  .articleTitle h2{
-    font-size: 18px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .container {
-    margin: auto;
-    width: 270px;
-  }
-  .articlesImg img {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-  }
-  .articlesContent  {
-    width: 100%;
-    max-width: 260px;
-    height: auto;
-  }
-}

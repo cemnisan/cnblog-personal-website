@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { useRouter } from "next/router";
-import emailjs from "emailjs-com";
+import React from "react";
 import useForm from "../../../../hooks/useForm";
-import ContactFrom from "./form/ContactForm";
 import Error from "../Error";
+import dynamic from "next/dynamic";
+
+const ContactForm = dynamic(() => import("./form/ContactForm"), { ssr: false });
 
 function Contact() {
   const [
@@ -29,7 +29,7 @@ function Contact() {
       </div>
       <form onSubmit={sendEmail}>
         <div className="row">
-          <ContactFrom onChange={onChange} />
+          <ContactForm onChange={onChange} />
         </div>
         <div className="formButton d-flex justify-content-center">
           <button

@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Layout from "../layout/layout";
-import { Contact } from "../components/Contact/";
+import dynamic from "next/dynamic";
+
+const Contact = dynamic(() => import("../components/Contact/components/contact/Contact"), { ssr: false });
 
 function MainContact() {
   return (

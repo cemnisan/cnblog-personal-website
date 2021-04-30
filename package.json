@@ -26,6 +26,7 @@
     "moment": "^2.29.1",
     "nanoid": "^3.1.22",
     "next": "^10.0.9",
+    "next-compose-plugins": "^2.2.1",
     "next-images": "^1.7.0",
     "nprogress": "^0.2.0",
     "react": "^17.0.1",

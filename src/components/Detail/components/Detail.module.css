@@ -1,117 +1,77 @@
-.container{
+.container {
+  margin: auto;
+  width: 600px;
+}
+
+.author {
+  color: rgba(26, 137, 23, 1);
+  cursor: pointer;
+}
+
+.date {
+  color: rgba(117, 117, 117, 1);
+}
+
+.articleMarkDown img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  margin-bottom: 0.3em;
+}
+
+.caption {
+  color: rgba(117, 117, 117, 1);
+  font-size: 16px;
+  margin-top: 3px;
+}
+
+.articleMarkDown h1{
+  margin-bottom: 0.5em;
+}
+
+.articleMarkDown p {
+  margin-bottom: 1em;
+  font-size: 18px;
+}
+
+.textArea {
+  width: 38em;
+  height: 10em;
+  min-height: 6em;
+  max-height: 10em;
+}
+
+.comment {
+  background-color: #f5f5f5;
+  margin-top: 1em;
+  padding: 11px 18px 4px;
+  border-radius: 15px;
+  position: relative;
+}
+
+@media screen and (max-width: 574px) {
+  .container {
     margin: auto;
-    width: 600px;
-}
-
-.author{
-    color:rgba(26, 137, 23, 1);
-    cursor: pointer;
-}
-
-.date{
-    color:rgba(117, 117, 117, 1);
-}
-
-.articleMarkDown img{
+    width: 350px;
+  }
+  .articleMarkDown img {
     width: 100%;
-    max-width: 550px;
+    max-width: 340px;
+  }
+  .articleMarkDown p {
+    width: 100%;
+    max-width: 400px;
     height: auto;
-    margin-bottom: 0.3em;
-}
-
-.caption{
-    color:rgba(117, 117, 117, 1);
-    font-size: 16px;
-    margin-top: 3px;
-}
-
-.articleMarkDown p{
-    margin-bottom: 1em;
-    font-size: 18px;
-    
-}
-
-.textArea{
-    width: 38em;
+  }
+  .markRow pre{
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+  .textArea {
+    width: 22em;
     height: 10em;
     min-height: 6em;
     max-height: 10em;
-}
-
-.line{
-    width: 600px;
-}
-
-.comment{
-    background-color: #f5f5f5;
-    margin-left: 58px;
-    padding: 11px 18px 4px;
-    border-radius: 15px;
-    position: relative;
-}
-
-.commentUser{
-    font-weight: bold;
-}
-
-@media screen and (max-width: 677px) and (min-width: 130px){
-    .container{
-        margin: auto;
-        width: 400px;
-    }
-   
-    .articleMarkDown {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-    }
-    .articleImg{
-        width: 100%;
-        max-width: 470px;
-        height: auto;
-    }
-    .textArea{
-        width: 24em;
-        height: auto;
-    }
-    .line{
-        width: 400px;
-    }
-
-}
-
-@media screen and (max-width: 422px){
-    .container{
-        margin: auto;
-        width: 350px;
-    }
-    .articleMarkDown {
-        width: 100%;
-        max-width: 350px;
-        height: auto;
-    }
-}
-
-@media screen and (max-width: 376px){
-    .container{
-        margin: auto;
-        width: 300px;
-    }
-    .articleMarkDown {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-    }
-}
-
-@media screen and (max-width:280px){
-    .container{
-        margin: auto;
-        width: 250px;
-    }
-    .articleMarkDown {
-        width: 100%;
-        max-width: 250px;
-        height: auto;
-    }
+  }
 }

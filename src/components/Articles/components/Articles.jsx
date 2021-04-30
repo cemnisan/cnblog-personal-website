@@ -1,11 +1,12 @@
 import React from "react";
+import Image from 'next/image';
 import ReactMarkdown from "react-markdown";
 import moment from "moment";
 import Link from "next/link";
 import slugify from "slugify";
-import cemnisan from "../../../assets/cemnisan.jpg";
 import { readingTime } from "../../../utilities/readingTimeCal";
 import styles from "./Articles.module.css";
+import ProfilePicture from "../../ProfilePicture";
 
 function Articles({ articles }) {
   return (
@@ -13,7 +14,7 @@ function Articles({ articles }) {
       {articles &&
         articles.map((item, index) => (
           <React.Fragment key={index}>
-            <div>
+            <div className={styles.articlesDetail}>
               <div className={`${styles.articleTitle} mb-3`}>
                 <Link
                   href="/articles/[slug]"
@@ -24,20 +25,20 @@ function Articles({ articles }) {
                   <h2 className="mt-1">{item.title}</h2>
                 </Link>
               </div>
-              <div className={`d-flex ${styles.articlesDate} mt-2 mb-2`}>
-                <img
-                  className="rounded-circle"
-                  height={28}
-                  width={28}
-                  src={cemnisan}
-                  alt="Cem Nisan"
-                />
-                <p className={styles.author}>Cem</p>
-                <p className={styles.date}>{moment(item.date).format("LL")}</p>
+              <div className={`d-flex mt-2 mb-2`}>
+                <ProfilePicture/>
+                <p className={`${styles.author} my-1`}>Cem</p>
+                <p className={`${styles.date} my-1`}>{moment(item.date).format("LL")}</p>
               </div>
               <div className={styles.articlesImg} key={index}>
                 {item.image ? (
-                  <img src={item.image.url} alt={item.image.caption} />
+                  <Image 
+                  src={item.image.url} 
+                  alt={item.image.caption}
+                  className="img-fluid"
+                  width={585}
+                  height={375}
+                  />
                 ) : (
                   <></>
                 )}

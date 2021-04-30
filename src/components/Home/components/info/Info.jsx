@@ -1,5 +1,5 @@
+import Image from "next/image";
 import styles from "./Info.module.css";
-import cemnisan from "../../../../assets/cemnisan.jpg";
 
 function Info() {
   return (
@@ -26,7 +26,13 @@ function Info() {
           </div>
           <div className="col-sm-12 order-first order-sm-1 order-md-1 order-lg-12 col-md-12 col-lg-5 mb-4 px-5">
             <div className={styles.homeImg}>
-              <img src={cemnisan} alt="Cem Nisan" />
+              <Image
+                className="rounded-circle"
+                src="https://res.cloudinary.com/cnblog/image/upload/v1619814820/blog/cemnisan_kopyas%C4%B1_podwo1.jpg"
+                alt="Cem Nisan"
+                width={300}
+                height={300}
+              />
             </div>
           </div>
         </div>

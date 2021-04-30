@@ -1,8 +1,16 @@
 import React from "react";
-import Info from "./components/info/Info";
-import Projects from "./components/projects/Projects";
 import HomeArticles from "./components/articles/HomeArticles";
-import Skills from "./components/skills/Skills";
+import dynamic from "next/dynamic";
+
+const Info = dynamic(() => import("./components/info/Info"), { ssr: false });
+
+const Projects = dynamic(() => import("./components/projects/Projects"), {
+  ssr: false,
+});
+
+const Skills = dynamic(() => import("./components/skills/Skills"), {
+  ssr: false,
+});
 
 function Home({ lastArticles }) {
   return (
