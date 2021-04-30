@@ -12,24 +12,6 @@
     color:rgba(117, 117, 117, 1);
 }
 
-
-.articleMarkDown h3{
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}
-.articleMarkDown h4{
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}
-.articleMarkDown h2{
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}
-.articleMarkDown h1{
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}
-
 .articleMarkDown img{
     width: 100%;
     max-width: 550px;

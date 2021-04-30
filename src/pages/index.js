@@ -1,7 +1,10 @@
-import unfetch from "isomorphic-fetch";
 import Head from "next/head";
+import dynamic from 'next/dynamic';
+import unfetch from "isomorphic-fetch";
 import Layout from "../layout/layout";
-import { Home } from "../components/Home";
+
+const Home = dynamic(() => import('../components/Home'))
+
 
 function Index({ lastArticles }) {
   return (

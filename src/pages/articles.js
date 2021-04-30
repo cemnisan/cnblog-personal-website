@@ -1,7 +1,9 @@
-import unfecth from "isomorphic-fetch";
 import Head from "next/head";
+import dynamic from 'next/dynamic';
+import unfecth from "isomorphic-fetch";
 import Layout from "../layout/layout";
-import { Article } from "../components/Articles/";
+
+const AllArticle = dynamic(() => import("../components/Articles/components/AllArticle"));
 
 function Articles({ articles }) {
   return (
@@ -30,7 +32,7 @@ function Articles({ articles }) {
 
         <link rel="canonical" href="https://cnblog.vercel.app/articles"></link>
       </Head>
-      <Article articles={articles} />
+      <AllArticle articles={articles} />
     </Layout>
   );
 }

@@ -1,7 +1,11 @@
 .navbrand{
-    font-size: 16px;
+    cursor: pointer;
 }
 
+.navItem{
+    font-size: 16px;
+    cursor: pointer;
+}
 .vol{
     font-size: 14px;
 }

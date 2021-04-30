@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Articles.module.css";
 import Articles from "./Articles";
 
-function Article({ articles }) {
+function AllArticle({ articles }) {
   return (
     <React.Fragment>
       <div className={`container mt-5 ${styles.container}`}>
@@ -18,4 +18,4 @@ function Article({ articles }) {
   );
 }
 
-export default Article;
+export default AllArticle;
